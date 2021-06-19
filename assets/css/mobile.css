@@ -1,0 +1,87 @@
+
+
+
+@media only screen and (min-width : 320px) {
+    
+    .profileWrapper>*{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    .profileWrapper{
+        background-color:rgb(68, 155, 195);
+    }
+
+    /* navigation bar */
+    nav.navbar{
+        display: flex;
+        border: 2px dashed;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /* navigation bar end*/
+
+    /*profile wrapper*/
+
+    .profileWrapper{
+        /* border: 2px dashed;  */
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    }
+
+    .profileImage img{
+        width: 40%;
+        border-radius: 50%;
+        margin: 25px;
+    }
+    .profileImage{
+        align-self: center;
+        justify-self: center;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    /* profileDetails */
+    .profileName{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /* ProfileSocialMedia icons */
+    .ProfileSocialMedia{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+
+    }
+    .ProfileSocialMedia span{
+        margin: 4px;
+    }
+
+
+    /*profile wrapper end*/
+
+
+    
+}
+@media only screen and (min-width : 480px) {
+
+}
+@media only screen and (min-width : 768px) {
+
+}
+@media only screen and (min-width : 992px) {
+
+}
+@media only screen and (min-width : 1200px) {
+
+}
