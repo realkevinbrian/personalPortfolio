@@ -30,3 +30,9 @@ p{
     padding: 0px;
     margin: 0px;
 }
+
+.wrapper>section{
+    border: 1px solid;
+    border-radius: 5px;
+
+}
