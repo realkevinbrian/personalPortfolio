@@ -1,3 +1,3 @@
 let name = "Kevin";
 
-console.table(name)frpo
+console.table(name);
