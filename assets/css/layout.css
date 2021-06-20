@@ -6,6 +6,8 @@
 /* layout */
 div.App{
         
+    padding-bottom: 40px;
+    
 }
 
 
@@ -13,7 +15,15 @@ div.App{
 section.header-wrapper{
     background-color: var(--main-Bg--);
     padding-bottom: 15%;
-
+    background-image: url('/assets/images/bg.jpg');
+    /* background-image: url("https://camo.githubusercontent.com/044d219b987b706f28dabd9346ee8d0ee48d0dc36bb914c85786d40dd151dba4/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f4c3152317476493973766b495777705659722f67697068792e676966"); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    ;
+    
+    
     
     
 
@@ -42,13 +52,21 @@ nav.navbar{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 
     
 }
 .profile-image img{
-    width: 50%;
+    width: 35%;
     border-radius: 50%;
     padding: 5%;
+    /* border: 2px solid rgb(28, 236, 236); */
+    background-color: rgba(138, 138, 138, 0.178);
+    object-fit: contain;
+    
+    
+
+    
 }
 
 .profile-details{
@@ -63,11 +81,12 @@ nav.navbar{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 4px;
 }
 .social-media-icons span{
     margin: 2px;
+    font-size: 2rem;
 
 }
 
@@ -87,7 +106,6 @@ section.body-wrapper{
 
 .info-container{
     height: auto;
-    
     border-radius: 5px;
     
 
@@ -101,12 +119,15 @@ section.body-wrapper{
     display: flex;
     align-content: center;
     align-items: center;
+    position: relative;
+    bottom: 30px;
+    
 }
 
 footer{
     background-color: rgb(255, 255, 255);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-content: center;
     align-items: center;
     justify-content: center;

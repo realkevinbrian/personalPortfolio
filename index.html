@@ -18,7 +18,7 @@
 
         <section class="header-wrapper"><!---------------header-wrapper-->
 
-            <nav class="navbar"><!-------navbar-->
+            <nav class="navbar" id="navbar"><!-------navbar-->
 
                 <div class="menu">
                     <span><i class="uil uil-list-ul"></i></span>
@@ -31,7 +31,7 @@
             </nav><!-------navbar end-->
 
 
-            <div class="profile-image"><!-------profile-image-->
+            <div class="profile-image" id="profileImage"><!-------profile-image-->
 
                 
                     <img src="./assets/images/image.jpg" alt="">
@@ -70,8 +70,8 @@
                 </div><!-------social-media-icons -->
 
                 <div class="about-me">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptate ut porro voluptates voluptam
+                    <p id="typeWrite">
+                       
                     </p>
                 </div>
             </div><!------profile-details-->
@@ -82,10 +82,10 @@
             <div class="info-container call-to-action"><!------call-to-action-->
 
                 <text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Let's Talk about your next Project!
                 </text>
 
-                <button>Hire me</button>
+                <button>Get in Touch</button>
 
             </div><!------call-to-action end-->
 
@@ -93,6 +93,12 @@
 
                 <div class="title">
                     <h4>Story about me</h4>
+
+                    <div class="ball-wrapper">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
 
                 <div class="wrapper">
@@ -105,44 +111,35 @@
                 <div class="downloadBtn">
                     <button>
                         Download CV
+                        <i class="uil uil-arrow-to-bottom"></i>
                     </button>
                 </div>
 
             </div><!---info-container end-->
 
-            <div class="info-container skills"><!---info-container2 skills-->
+            <div class="info-container aboutMe"><!---info-container 1-->
 
                 <div class="title">
                     <h4>Skills</h4>
+
+                    <div class="ball-wrapper">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
 
-                <div class="wrapper"><!-----skills-->
+                <div class="wrapper">
 
-                    <article>
-                        <span><i>HTML5</i></span>
-                        <span>HTML5</span>
-                    </article>
+                    <div class="skills-wrapper">
+                        <img src="./assets/images/skills.svg" alt="">
+                    </div>
 
-                    <article>
-                        <span><i>CSS3</i></span>
-                        <span>CSS3</span>
-                    </article>
-
-                    <article>
-                        <span><i>JS</i></span>
-                        <span>Javascript/Jquery</span>
-                    </article>
-
-                    <article>
-                        <span><i>ReactJS</i></span>
-                        <span>React Js</span>
-                    </article>
-
-
-                    
-                </div><!-----skills end-->
+                </div>
 
             </div><!---info-container end-->
+
+           
 
             <div class="info-container projects"><!---info-container3-->
                 <div class="title">Recent Projects</div>
@@ -246,18 +243,24 @@
             </div><!---info-container end-->
         </section><!------body wrapper end-->
 
-        <footer>
-            <div>
-                <span>
-                <i class="uil uil-envelope-edit"></i>
-                </span>
-            </div>
-            <div><span><i class="uil uil-user"></i></span></div>
-            <div><span><i class="uil uil-blogger"></i></span></div>
-        </footer>
-        
-
     </div><!-----------master Container end-->
+
+
+    <footer>
+
+        <div>
+            <span>
+            <i class="uil uil-envelope-edit"></i>
+            </span>
+        </div>
+
+        <div><span><i class="uil uil-user"></i></span></div>
+
+        <div><span><i class="uil uil-blogger"></i></span></div>
+
+        <div><span><i class="uil uil-brackets-curly"></i></span></div>
+
+    </footer>
 
     
    <script src="./assets/script/App.js"></script>
