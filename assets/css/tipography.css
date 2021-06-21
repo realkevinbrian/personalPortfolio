@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 :root{
     --main-Bg--:#0c182a; 
+    --second-color--:rgb(7, 136, 211);
 }
 
 
@@ -10,8 +13,14 @@ h2,
 h3,
 h4,
 h5{
-    /* color: #ffffff; */
-    font-size: 1rem;
+ font-family: 'Poppins', sans-serif;
+    
+}
+
+p,
+div,
+a{
+    font-family: 'Poppins', sans-serif;
 }
 
 span i{
@@ -220,7 +229,10 @@ nav.navbar{
     align-content: center;
     align-items: center;
     font-size: 1.3rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: var(--second-color--);
+    
+
     
 }
 
@@ -230,10 +242,12 @@ nav.navbar{
     grid-template-columns: 1fr;
     grid-gap: 20px;
     padding-top: 20px;
+    
 }
 
 project{
-    border: 2px solid;
+    background-color: var(--main-Bg--);
+    color: white;
 
 }
 project img{
@@ -244,12 +258,27 @@ project img{
 .project-description{
     display: grid;
     grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+
 
       
 }
 
-.project-description p{
+.project-description h5{
     text-align: center;
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+    
+    
+}
+
+.project-description p{
+    /* text-align: center; */
+    padding: 10px;
+    padding-top: 0px;
 }
 
 .demoBtns{
@@ -263,8 +292,17 @@ project img{
     font-size: 0.9rem;
     border: 2px;
     padding: 10px;
-    background-color: rgb(0, 162, 255);
+    background-color: var(--second-color--);
     color: white;
+    transition: background-color 0.5s;
+    
+}
+
+.demoBtns button:hover{
+    background-color: var(--main-Bg--);
+    border: 1px solid;
+    
+
 }
 
 
@@ -273,11 +311,12 @@ project img{
 
 footer{
     /* border: 1px solid; */
-    height: 40px;
+    height: 60px;
+    color: white;
 }
 
 footer span>i{
-    color: black!important;
-    font-size: 1.6rem;
+    color: rgb(255, 255, 255)!important;
+    font-size: 1.5rem;
 
 }
