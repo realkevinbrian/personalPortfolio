@@ -1,0 +1,53 @@
+@mixin gridBox ($columns){
+    display: grid;
+    grid-template-columns: $columns;
+
+}
+
+
+@mixin flexBox ($direction){
+    display: flex;
+    grid-template-columns:row;
+}
+
+@mixin  centerGrid ($column){
+
+    @include gridBox($column);
+    justify-items: center;
+    
+}
+
+
+@mixin  centerFlex ($direction){
+
+    @include flexBox($direction);
+    align-items: center;
+    
+
+}
+
+
+@mixin  alignFlexCenter {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+@mixin shadow{
+    
+}
+
+
+@mixin  darkTheme {
+    background-color: $primary-color-dark;
+    color: white;
+}
+
+@mixin sectionTitle{
+    text-align: center;
+    color: $accent-color!important;
+    font-size: 1.5rem;
+    padding: 15px;
+
+}

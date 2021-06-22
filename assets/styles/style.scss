@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+@import "modules/palette";
+@import "modules/functions";
+@import "modules/components";
+@import "modules/variables";
+@import "modules/typography";
+
+
+
+
+// Always use table of contents
+// 1-global styles
+// 2-typography
+// 3-components
+//    3.1 buttons
+
+/*==========global styles=======*/
+*{
+    outline: none;
+    list-style: none;
+
+}
+
+ul{
+    padding: 0px;
+    margin:0px;
+
+    li{
+        margin: 0px;
+        padding: 0px;
+    }
+
+}
+
+/*==========global styles end=======*/
+
+
+/*============App===========*/
+App{
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+/*============App===========*/
+
+/*===========navigation=======*/
+
+navigation{
+    @include gridBox(1fr 1fr);
+    padding: 10px;
+    box-shadow: 3px 2px 3px -1px rgba(140,140,140,0.5);
+
+    .menuBtn{
+        @include alignFlexCenter();
+        justify-content: flex-start;
+        font-size: $logo-size;
+
+    }
+
+    .logo{
+        font-size: $logo-size;
+        @include alignFlexCenter();
+        justify-content: flex-end;
+        margin: 10px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+}
+
+/*===========navigation end=======*/
+
+
+/*===========profileCard=======*/
+
+.profileCard{
+
+    @extend .card;
+    display: grid;
+    margin: 0px!important;
+
+    .name{
+        
+        @include alignFlexCenter();
+        justify-content: center
+    }
+
+    &__image{
+        @include alignFlexCenter();
+        justify-content: center;
+        img{
+            width: 60%;
+            border-radius:50%;
+            
+        }
+    }
+
+    &__desc{
+        padding: $pad;
+    }
+
+    &__desc--links{
+        @include alignFlexCenter();
+        justify-content: center;        
+        span{
+            margin: $marg;
+            font-size: 1.6rem;
+            
+        }
+    }
+
+    &__desc--intro{
+        @include alignFlexCenter();
+        justify-content: center;
+        
+
+        p{
+            display: flex;
+            padding: 0px;
+            text-align: center;
+        }
+        
+    }
+
+
+}
+
+/*===========profileCard end=======*/
+
+/*==========buttons==========*/
+.button{
+    border: 1px solid transparent;
+    background-color: $primary-color;
+    padding: $pad;
+    
+
+    &__link{
+        color: $primary-color-text;
+        text-decoration: none;    
+    }
+
+}
+
+/*==========buttons ends==========*/
+
+
+/*==========cards==========*/
+.card{
+    @include darkTheme;
+    padding: $pad;
+    margin: $marg;
+    
+
+    &__text{
+        color: $primary-color-text;
+    }
+
+    &__title{
+        color: $primary-color-text;
+        
+    }
+}
+
+/*==========projects==========*/
+
+.projectCard{
+    @extend .card;
+    padding: 0;
+    @include gridBox(1fr);
+
+
+    &__img{
+        img{
+            width: 100%;
+        }
+
+    }
+
+    &__title{
+        @include alignFlexCenter();
+        justify-content: center;
+        
+
+
+    }
+
+    &__desc{
+        padding: $pad;
+        @include alignFlexCenter();
+        justify-content: center;
+
+
+    }
+
+    &__links{
+        @include gridBox(1fr 1fr);
+        grid-gap: 10px;
+        padding: $pad;
+
+    }
+}
+/*==========projects end==========*/
+
+
+/*==========menu footer==========*/
+
+.fixedmenu{
+    padding: 0px;
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    background-color: $primary-color-text;
+    width: 100%;
+    height: 10%;
+    box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+
+    &__ul{
+        @include gridBox(repeat(4,1fr));
+        
+    }
+
+    &__items{
+        @include gridBox(1fr);
+        justify-items: center;
+
+        span:nth-child(2) {
+           font-size: .8rem; 
+        }
+
+        span:nth-child(1) {
+            font-size: 1.3rem; 
+            color: $primary-color;
+         }
+        
+    }
+
+
+
+
+    
+}
+
+/*==========menu footer==========*/
+
+
+/*section_title*/
+.section_title{
+    
+    @include sectionTitle;
+
+}
+
+/*section_title end*/
