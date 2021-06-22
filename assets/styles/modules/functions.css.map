@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAyDA,uCAAuC;AAUvC,uCAAuC",
     "sources": [
         "functions.scss"
     ],

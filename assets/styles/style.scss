@@ -4,8 +4,7 @@
 @import "modules/components";
 @import "modules/variables";
 @import "modules/typography";
-
-
+@import "modules/devices/desktop";
 
 
 // Always use table of contents
@@ -37,7 +36,7 @@ ul{
 
 /*============App===========*/
 App{
-    margin-bottom: 60px;
+    margin-bottom: 10 0px;
     display: grid;
     grid-template-columns: 1fr
 }
@@ -78,6 +77,12 @@ navigation{
     @extend .card;
     display: grid;
     margin: 0px!important;
+
+    @media screen and (min-width:$tablets){
+        background-color: $accent-color!important;
+
+
+    }
 
     .name{
         
@@ -132,6 +137,7 @@ navigation{
     border: 1px solid transparent;
     background-color: $primary-color;
     padding: $pad;
+    transition: background-color 0.4s;
     
 
     &__link{
@@ -139,7 +145,20 @@ navigation{
         text-decoration: none;    
     }
 
+    &:hover{
+        background-color: $accent-color;
+    }
+
 }
+
+.btn-aboutMe{
+    align-self: flex-end!important;
+    justify-self: flex-end!important;
+    
+
+
+}
+
 
 /*==========buttons ends==========*/
 
@@ -158,6 +177,27 @@ navigation{
     &__title{
         color: $primary-color-text;
         
+    }
+
+    &__heroText{
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (max-width: 768px){
+            position: relative;
+
+        }
+        
+        
+
+    }
+
+    &__skills{
+
+        img{
+
+            width: 80%;
+        }
     }
 }
 
@@ -205,7 +245,9 @@ navigation{
 /*==========menu footer==========*/
 
 .fixedmenu{
-    padding: 0px;
+    padding: 15px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     margin: 0px;
     position: fixed;
     bottom: 0px;
@@ -214,8 +256,11 @@ navigation{
     height: 10%;
     box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
 
+
+
     &__ul{
-        @include gridBox(repeat(4,1fr));
+        $grid-4 : repeat(4,1fr);
+        @include gridBox($grid-4);
         
     }
 
@@ -224,13 +269,13 @@ navigation{
         justify-items: center;
 
         span:nth-child(2) {
-           font-size: .8rem; 
+        font-size: .8rem; 
         }
 
         span:nth-child(1) {
             font-size: 1.3rem; 
             color: $primary-color;
-         }
+        }
         
     }
 

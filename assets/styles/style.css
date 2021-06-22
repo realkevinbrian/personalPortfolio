@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+/* ===========responsive=============*/
+/* ===========responsive=============*/
 html,
 body {
   padding: 0px;
@@ -52,7 +54,7 @@ ul li {
 /*==========global styles end=======*/
 /*============App===========*/
 App {
-  margin-bottom: 60px;
+  margin-bottom: 10 0px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -106,6 +108,12 @@ navigation .logo {
   display: -ms-grid;
   display: grid;
   margin: 0px !important;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard {
+    background-color: #536DFE !important;
+  }
 }
 
 .profileCard .name {
@@ -184,11 +192,23 @@ navigation .logo {
   border: 1px solid transparent;
   background-color: #2196F3;
   padding: 10px;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .button__link {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.button:hover {
+  background-color: #536DFE;
+}
+
+.btn-aboutMe {
+  -ms-flex-item-align: end !important;
+      align-self: flex-end !important;
+  justify-self: flex-end !important;
 }
 
 /*==========buttons ends==========*/
@@ -206,6 +226,26 @@ navigation .logo {
 
 .card__title {
   color: #FFFFFF;
+}
+
+.card__heroText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .card__heroText {
+    position: relative;
+  }
+}
+
+.card__skills img {
+  width: 80%;
 }
 
 /*==========projects==========*/
@@ -258,7 +298,9 @@ navigation .logo {
 /*==========projects end==========*/
 /*==========menu footer==========*/
 .fixedmenu {
-  padding: 0px;
+  padding: 15px;
+  padding-bottom: 0px;
+  padding-left: 0px;
   margin: 0px;
   position: fixed;
   bottom: 0px;

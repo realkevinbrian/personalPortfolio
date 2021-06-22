@@ -1,3 +1,4 @@
+window.onload = typeWriter;
 var i = 0;
 let name = "Kevin Brian";
 var txt = `Hey, my name is ${name}, I am a Web Developer, Welcome to my portolio`; /* The text */
@@ -11,4 +12,3 @@ function typeWriter() {
   }
 }
 
-typeWriter();
