@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Brian Personal Portfolio</title>
     <link rel="stylesheet" href="/assets/styles/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="node_modules/@icon/unicons/unicons.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 </head>
 <body>
 
@@ -79,7 +80,7 @@
         </div><!--about me end-->
 
 
-        <div class="card card__aboutMe"><!-----card about me-->
+        <div class="card card__aboutMe" data-aos="fade-right"><!-----card about me-->
 
             <div class="card__title">
                 <h5>Title</h5>
@@ -97,9 +98,7 @@
 
         <section class="project"><!---projects section end-->
 
-            <h5 class="title"></h5>
-
-            <div class="projectCard">
+            <div class="projectCard" data-aos="fade-left">
 
                 <div class="projectCard__img">
                     <img src="/assets/images/projects/image1.jpg" alt="">
@@ -122,7 +121,7 @@
 
             </div>
 
-            <div class="projectCard">
+            <div class="projectCard" data-aos="fade-right">
 
                 <div class="projectCard__img">
                     <img src="/assets/images/projects/image2.jpg" alt="">
@@ -145,7 +144,7 @@
 
             </div>
 
-            <div class="projectCard">
+            <div class="projectCard" data-aos="fade-left">
 
                 <div class="projectCard__img">
                     <img src="/assets/images/projects/image4.jpg" alt="">
@@ -207,12 +206,17 @@
         
 
     </menu>
-
-
-
-
-
-
    <script src="./assets/script/App.js"></script>
+   <script src="node_modules/aos/dist/aos.js"></script>
+   <script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-cubic',
+      delay: 100,
+    });
+  </script>
+   
+   
 </body>
 </html>
