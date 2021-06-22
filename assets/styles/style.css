@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+
+span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/*==========global styles=======*/
+* {
+  outline: none;
+  list-style: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*==========global styles end=======*/
+/*============App===========*/
+App {
+  margin-bottom: 60px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+/*============App===========*/
+/*===========navigation=======*/
+navigation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  -webkit-box-shadow: 3px 2px 3px -1px rgba(140, 140, 140, 0.5);
+          box-shadow: 3px 2px 3px -1px rgba(140, 140, 140, 0.5);
+}
+
+navigation .menuBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1.4rem;
+}
+
+navigation .logo {
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+/*===========navigation end=======*/
+/*===========profileCard=======*/
+.profileCard {
+  display: -ms-grid;
+  display: grid;
+  margin: 0px !important;
+}
+
+.profileCard .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileCard__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileCard__image img {
+  width: 60%;
+  border-radius: 50%;
+}
+
+.profileCard__desc {
+  padding: 10px;
+}
+
+.profileCard__desc--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileCard__desc--links span {
+  margin: 5px;
+  font-size: 1.6rem;
+}
+
+.profileCard__desc--intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profileCard__desc--intro p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  text-align: center;
+}
+
+/*===========profileCard end=======*/
+/*==========buttons==========*/
+.button {
+  border: 1px solid transparent;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.button__link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*==========buttons ends==========*/
+/*==========cards==========*/
+.card, .profileCard, .projectCard {
+  background-color: #0B132B;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+}
+
+.card__text {
+  color: #FFFFFF;
+}
+
+.card__title {
+  color: #FFFFFF;
+}
+
+/*==========projects==========*/
+.projectCard {
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.projectCard__img img {
+  width: 100%;
+}
+
+.projectCard__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectCard__desc {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectCard__links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+/*==========projects end==========*/
+/*==========menu footer==========*/
+.fixedmenu {
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  bottom: 0px;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 10%;
+  -webkit-box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+          box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+}
+
+.fixedmenu__ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.fixedmenu__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.fixedmenu__items span:nth-child(2) {
+  font-size: .8rem;
+}
+
+.fixedmenu__items span:nth-child(1) {
+  font-size: 1.3rem;
+  color: #2196F3;
+}
+
+/*==========menu footer==========*/
+/*section_title*/
+.section_title {
+  text-align: center;
+  color: #536DFE !important;
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+/*section_title end*/
+/*# sourceMappingURL=style.css.map */
