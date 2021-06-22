@@ -61,6 +61,13 @@ App {
       grid-template-columns: 1fr;
 }
 
+@media screen and (min-width: 668px) {
+  App {
+    -ms-grid-rows: 50px 32% auto;
+        grid-template-rows: 50px 32% auto;
+  }
+}
+
 /*============App===========*/
 /*===========navigation=======*/
 navigation {
@@ -113,6 +120,14 @@ navigation .logo {
 @media screen and (min-width: 668px) {
   .profileCard {
     background-color: #536DFE !important;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "l r";
+    background-image: url("./modules/images/bg.jpg");
+    background-position: center;
+    background-clip: border-box;
+    background-attachment: fixed;
+    background-size: cover;
   }
 }
 
@@ -140,6 +155,12 @@ navigation .logo {
           justify-content: center;
 }
 
+@media screen and (min-width: 668px) {
+  .profileCard__image {
+    grid-area: r;
+  }
+}
+
 .profileCard__image img {
   width: 60%;
   border-radius: 50%;
@@ -147,6 +168,26 @@ navigation .logo {
 
 .profileCard__desc {
   padding: 10px;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__desc {
+    grid-area: l;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .profileCard__desc--links {
@@ -164,6 +205,12 @@ navigation .logo {
 .profileCard__desc--links span {
   margin: 5px;
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__desc--links span {
+    font-size: 2rem !important;
+  }
 }
 
 .profileCard__desc--intro {
@@ -184,6 +231,14 @@ navigation .logo {
   display: flex;
   padding: 0px;
   text-align: center;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__desc--intro p {
+    width: 80%;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
 }
 
 /*===========profileCard end=======*/
@@ -244,11 +299,31 @@ navigation .logo {
   }
 }
 
+@media screen and (min-width: 668px) {
+  .card__skills {
+    width: 60%;
+  }
+  .card__skills img {
+    width: 50% !important;
+  }
+}
+
 .card__skills img {
   width: 80%;
 }
 
 /*==========projects==========*/
+@media screen and (min-width: 668px) {
+  .project {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+  }
+}
+
 .projectCard {
   padding: 0;
   display: -ms-grid;
@@ -309,6 +384,12 @@ navigation .logo {
   height: 10%;
   -webkit-box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
           box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+}
+
+@media screen and (min-width: 668px) {
+  .fixedmenu {
+    display: none;
+  }
 }
 
 .fixedmenu__ul {

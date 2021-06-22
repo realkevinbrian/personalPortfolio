@@ -38,7 +38,11 @@ ul{
 App{
     margin-bottom: 10 0px;
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    @media screen and (min-width:$tablets){
+        grid-template-rows: 50px 32% auto;
+        
+    }
 }
 
 /*============App===========*/
@@ -80,6 +84,15 @@ navigation{
 
     @media screen and (min-width:$tablets){
         background-color: $accent-color!important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "l r";
+        background-image:url("./modules/images/bg.jpg");
+        background-position: center;
+        background-clip: border-box;
+        background-attachment: fixed;
+        background-size: cover;
+
+
 
 
     }
@@ -93,6 +106,10 @@ navigation{
     &__image{
         @include alignFlexCenter();
         justify-content: center;
+        @media screen and (min-width:$tablets){
+            grid-area: r;
+
+        }
         img{
             width: 60%;
             border-radius:50%;
@@ -102,14 +119,26 @@ navigation{
 
     &__desc{
         padding: $pad;
+        @media screen and (min-width:$tablets){
+            grid-area: l;
+            @include alignFlexCenter;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
     }
 
     &__desc--links{
         @include alignFlexCenter();
-        justify-content: center;        
+        justify-content: center;       
         span{
             margin: $marg;
             font-size: 1.6rem;
+            @media screen and (min-width:$tablets){
+                font-size: 2rem!important;
+            }
             
         }
     }
@@ -123,6 +152,11 @@ navigation{
             display: flex;
             padding: 0px;
             text-align: center;
+            @media screen and (min-width:$tablets){
+                width: 80%;
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
         }
         
     }
@@ -194,6 +228,14 @@ navigation{
 
     &__skills{
 
+        @media screen and (min-width:$tablets){
+            
+            img{
+                width: 50%!important;
+            }
+            width: 60%;
+        }
+
         img{
 
             width: 80%;
@@ -203,10 +245,19 @@ navigation{
 
 /*==========projects==========*/
 
+.project{
+    @media screen and (min-width:$tablets){
+        @include gridBox(1fr 1fr 1fr);
+        grid-gap: 10px;
+        padding: 20px;
+    }
+}
+
 .projectCard{
     @extend .card;
     padding: 0;
     @include gridBox(1fr);
+   
 
 
     &__img{
@@ -255,7 +306,9 @@ navigation{
     width: 100%;
     height: 10%;
     box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
-
+    @media screen and (min-width:$tablets){
+        display: none;
+    }
 
 
     &__ul{
