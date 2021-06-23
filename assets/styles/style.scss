@@ -14,6 +14,10 @@
 //    3.1 buttons
 
 /*==========global styles=======*/
+
+body{
+    height: 100%;
+}
 *{
     outline: none;
     list-style: none;
@@ -49,7 +53,7 @@ App{
     display: grid;
     grid-template-columns: 1fr;
     @media screen and (min-width:$tablets){
-        grid-template-rows: 50px 600px auto;
+
         
     }
 }
@@ -105,6 +109,7 @@ navigation{
                         border-radius: 2px;
                         background-color: $primary-color;
                         transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        margin-right: 20px;
                         
 
                         &:hover{
@@ -179,6 +184,7 @@ navigation{
         background-clip: border-box;
         background-attachment: fixed;
         background-size: cover;
+        height: 650px;
 
 
 
@@ -196,7 +202,11 @@ navigation{
         justify-content: center;
         padding-top: 60px;
         @media screen and (min-width:$tablets){
-            grid-area: r;
+            grid-area:r;
+
+            img{
+                width: 40%;
+            }
 
         }
         img{
@@ -209,7 +219,7 @@ navigation{
     &__desc{
         padding: $pad;
         @media screen and (min-width:$tablets){
-            grid-area: l;
+            grid-area:l;
             @include alignFlexCenter;
             justify-content: center;
             display: flex;

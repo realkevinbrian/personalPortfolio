@@ -37,6 +37,10 @@ span {
 }
 
 /*==========global styles=======*/
+body {
+  height: 100%;
+}
+
 * {
   outline: none;
   list-style: none;
@@ -65,13 +69,6 @@ App {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-}
-
-@media screen and (min-width: 668px) {
-  App {
-    -ms-grid-rows: 50px 600px auto;
-        grid-template-rows: 50px 600px auto;
-  }
 }
 
 /*============App===========*/
@@ -143,6 +140,7 @@ navigation .menuBtn .nav {
     background-color: #2196F3;
     -webkit-transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    margin-right: 20px;
   }
   navigation .menuBtn .nav__items:nth-last-child(1):hover {
     background-color: #0B132B;
@@ -209,6 +207,7 @@ navigation .logo {
     background-clip: border-box;
     background-attachment: fixed;
     background-size: cover;
+    height: 650px;
   }
 }
 
@@ -240,6 +239,9 @@ navigation .logo {
 @media screen and (min-width: 668px) {
   .profileCard__image {
     grid-area: r;
+  }
+  .profileCard__image img {
+    width: 40%;
   }
 }
 
