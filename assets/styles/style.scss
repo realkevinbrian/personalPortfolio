@@ -4,8 +4,7 @@
 @import "modules/components";
 @import "modules/variables";
 @import "modules/typography";
-
-
+@import "modules/devices/desktop";
 
 
 // Always use table of contents
@@ -18,6 +17,15 @@
 *{
     outline: none;
     list-style: none;
+    text-decoration: none;
+
+}
+
+span{
+
+    a{
+        color: $primary-color-dark;
+    }
 
 }
 
@@ -37,9 +45,13 @@ ul{
 
 /*============App===========*/
 App{
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     display: grid;
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
+    @media screen and (min-width:$tablets){
+        grid-template-rows: 50px 600px auto;
+        
+    }
 }
 
 /*============App===========*/
@@ -50,11 +62,85 @@ navigation{
     @include gridBox(1fr 1fr);
     padding: 10px;
     box-shadow: 3px 2px 3px -1px rgba(140,140,140,0.5);
+    position: fixed;
+    width: 100%;
+    background-color: $primary-color-text;
+    z-index: 10000;
+    @media screen and (min-width:$tablets){
+    }
 
     .menuBtn{
         @include alignFlexCenter();
         justify-content: flex-start;
         font-size: $logo-size;
+
+        .nav{
+            display: none;
+        }
+
+        @media screen and (min-width:$tablets){
+
+            grid-column: 2;
+            justify-content: flex-end;
+
+            i{
+                display: none;
+            }
+
+            .nav{
+
+                display: flex;
+                flex-direction: row;
+                grid-gap: $pad + 30;
+
+                &__items{
+
+                    &:nth-last-child(1){
+                        
+                        border: 2px solid transparent;
+                        display: flex;
+                        align-content: center;
+                        justify-content: center;
+                        padding: $pad - 4;
+                        border-radius: 2px;
+                        background-color: $primary-color;
+                        transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                        
+
+                        &:hover{
+                            background-color: $primary-color-dark;
+                            border-radius: 5px;
+                            
+                        }
+                        
+                        a{
+                            font-size: 0.7rem!important;
+                            font-weight: bold;
+                            color: $primary-color-text;
+                            
+                        }
+
+                    }
+                }
+                a{
+                    font-size: 1rem;
+                    
+                    transition: color 0.5s;
+                    color: $primary-color-dark;
+                    
+                    &:hover {
+                        color: $primary-color;
+                    }
+                    
+
+                }
+
+            }
+
+            
+
+        }
+
 
     }
 
@@ -62,9 +148,14 @@ navigation{
         font-size: $logo-size;
         @include alignFlexCenter();
         justify-content: flex-end;
-        margin: 10px;
+        margin: 20px;
         margin-bottom: 0px;
         margin-top: 0px;
+
+        @media screen and (min-width:$tablets){
+            grid-row: 1;
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -78,6 +169,21 @@ navigation{
     @extend .card;
     display: grid;
     margin: 0px!important;
+    
+    @media screen and (min-width:$tablets){
+        background-color: $accent-color!important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "l r";
+        background-image:url("./modules/images/bg.jpg");
+        background-position: center;
+        background-clip: border-box;
+        background-attachment: fixed;
+        background-size: cover;
+
+
+
+
+    }
 
     .name{
         
@@ -88,6 +194,11 @@ navigation{
     &__image{
         @include alignFlexCenter();
         justify-content: center;
+        padding-top: 60px;
+        @media screen and (min-width:$tablets){
+            grid-area: r;
+
+        }
         img{
             width: 60%;
             border-radius:50%;
@@ -97,14 +208,26 @@ navigation{
 
     &__desc{
         padding: $pad;
+        @media screen and (min-width:$tablets){
+            grid-area: l;
+            @include alignFlexCenter;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
     }
 
     &__desc--links{
         @include alignFlexCenter();
-        justify-content: center;        
+        justify-content: center;       
         span{
             margin: $marg;
             font-size: 1.6rem;
+            @media screen and (min-width:$tablets){
+                font-size: 2rem!important;
+            }
             
         }
     }
@@ -118,6 +241,11 @@ navigation{
             display: flex;
             padding: 0px;
             text-align: center;
+            @media screen and (min-width:$tablets){
+                width: 80%;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
         }
         
     }
@@ -127,11 +255,34 @@ navigation{
 
 /*===========profileCard end=======*/
 
+/* content-top === container ===*/
+
+.contentTop{
+
+    @include gridBox(1fr);
+    @media screen and (min-width:$tablets){
+    @include gridBox(repeat(12,1fr));
+    }
+
+    &__child{
+    @media screen and (min-width:$tablets){
+        grid-column: 2/-2;
+    }
+    }
+
+
+}
+
+
+
+/* content-top === container ===*/
+
 /*==========buttons==========*/
 .button{
     border: 1px solid transparent;
     background-color: $primary-color;
     padding: $pad;
+    transition: background-color 0.4s;
     
 
     &__link{
@@ -139,7 +290,33 @@ navigation{
         text-decoration: none;    
     }
 
+    &:hover{
+        background-color: $accent-color;
+    }
+
 }
+
+.btn-aboutMe{
+    align-self: flex-end!important;
+    justify-self: flex-end!important;
+    
+    
+
+
+}
+.calltoAction-btn{
+
+    @media screen and (min-width:$tablets){
+    width: 40%;
+    padding: 0;
+    margin: 0px;
+    justify-self: center;
+    align-self: center;
+    height: 40%;
+    }
+    
+}
+
 
 /*==========buttons ends==========*/
 
@@ -159,14 +336,61 @@ navigation{
         color: $primary-color-text;
         
     }
+
+    &__heroText{
+        display: flex;
+        flex-direction: column;
+        
+        @media screen and (min-width: $tablets){
+            @include gridBox(1fr 1fr);
+
+            p{
+                font-size: 2rem;
+                font-weight: bold;
+                text-align: center;
+                align-self: flex-end;
+                justify-self: flex-end;
+                
+                
+            }
+
+        }
+        
+        
+
+    }
+
+    &__skills{
+
+        @media screen and (min-width:$tablets){
+            
+            img{
+                width: 50%!important;
+            }
+            
+        }
+
+        img{
+
+            width: 80%;
+        }
+    }
 }
 
 /*==========projects==========*/
 
+.project{
+    @media screen and (min-width:$tablets){
+        @include gridBox(1fr 1fr);
+        grid-gap: 10px;
+        padding: 100px;
+    }
+}
+
 .projectCard{
     @extend .card;
     padding: 0;
-    @include gridBox(1fr);
+    @include gridBox(1fr);   
 
 
     &__img{
@@ -201,11 +425,162 @@ navigation{
 }
 /*==========projects end==========*/
 
+/*==========testimony section==========*/
+
+
+
+.testimony{
+
+    
+    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $pad * 6;
+
+    @media screen and (min-width:$tablets){
+        grid-template-columns: 1fr;
+        grid-gap: $pad;
+    }
+
+
+   
+
+    &__wrapper{
+
+        border: 1px solid white;
+        background-color: $primary-color-text;
+        color: $primary-color-dark;
+        padding: $pad * 2;
+        padding-top: 0px;
+
+    
+
+    }
+
+    &__text{
+
+        padding-top:0px;
+        margin-top: 0px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        
+
+        &::before{
+            content: "\"";
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 3rem;
+            padding: 0px;
+            margin-top: 0px;
+            position: relative;
+            bottom: -40px;
+            
+        }
+
+        
+        
+
+
+
+    }
+
+    &__image{
+        display: flex;
+        align-content: center;
+        justify-content: flex-end;
+        align-items: center;
+        
+        h4{
+            font-size: 1.3rem;
+            margin: $marg + 5;
+            
+        }
+
+
+    }
+
+    img{
+        max-width: 25%;
+        border-radius: 50%;
+        border: 2px solid $primary-color-dark;
+    }
+}
+
+
+
+/*==========testimoy end==========*/
+
+/*=============contact__form=============*/
+.contact__form{
+    
+    form{
+
+        @include gridBox(1fr);
+        grid-gap: $pad;
+        
+        .inputForm{
+            display: flex;
+            flex-direction: column;
+            
+            input{
+                height: 40px;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-family: $font;
+
+
+                &::placeholder{
+                    font-size: 1rem;
+                    font-weight: 400;
+                    padding: $pad + 5;
+                    color: $primary-color-dark;
+
+                }   
+            }
+            textarea{
+                height: 70%;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                font-size: 1.2rem;
+                font-weight: 400;
+                font-family: $font;
+                
+
+
+                &::placeholder{
+                    font-size: 1rem;
+                    font-weight: 400;
+                    padding: $pad + 5;
+                    color: $primary-color-dark;
+
+                }
+            }
+
+
+            
+
+
+        }
+
+        .submit-btn{
+            color: white;
+        }
+        
+
+    }
+
+}
+
+/*=============contact__form end=============*/
 
 /*==========menu footer==========*/
 
 .fixedmenu{
-    padding: 0px;
+    padding: 15px;
+    padding-bottom: 0px;
+    padding-left: 0px;
     margin: 0px;
     position: fixed;
     bottom: 0px;
@@ -213,9 +588,14 @@ navigation{
     width: 100%;
     height: 10%;
     box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+    @media screen and (min-width:$tablets){
+        display: none;
+    }
+
 
     &__ul{
-        @include gridBox(repeat(4,1fr));
+        $grid-4 : repeat(4,1fr);
+        @include gridBox($grid-4);
         
     }
 
@@ -224,13 +604,13 @@ navigation{
         justify-items: center;
 
         span:nth-child(2) {
-           font-size: .8rem; 
+        font-size: .8rem; 
         }
 
         span:nth-child(1) {
             font-size: 1.3rem; 
             color: $primary-color;
-         }
+        }
         
     }
 
@@ -241,6 +621,7 @@ navigation{
 }
 
 /*==========menu footer==========*/
+
 
 
 /*section_title*/

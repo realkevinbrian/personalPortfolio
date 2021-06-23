@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+/* ===========responsive=============*/
+/* ===========responsive=============*/
 html,
 body {
   padding: 0px;
@@ -28,6 +30,7 @@ p {
   font-weight: 200;
 }
 
+a,
 span {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -37,6 +40,11 @@ span {
 * {
   outline: none;
   list-style: none;
+  text-decoration: none;
+}
+
+span a {
+  color: #0B132B;
 }
 
 ul {
@@ -52,11 +60,18 @@ ul li {
 /*==========global styles end=======*/
 /*============App===========*/
 App {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 668px) {
+  App {
+    -ms-grid-rows: 50px 600px auto;
+        grid-template-rows: 50px 600px auto;
+  }
 }
 
 /*============App===========*/
@@ -69,6 +84,10 @@ navigation {
   padding: 10px;
   -webkit-box-shadow: 3px 2px 3px -1px rgba(140, 140, 140, 0.5);
           box-shadow: 3px 2px 3px -1px rgba(140, 140, 140, 0.5);
+  position: fixed;
+  width: 100%;
+  background-color: #FFFFFF;
+  z-index: 10000;
 }
 
 navigation .menuBtn {
@@ -84,6 +103,67 @@ navigation .menuBtn {
   font-size: 1.4rem;
 }
 
+navigation .menuBtn .nav {
+  display: none;
+}
+
+@media screen and (min-width: 668px) {
+  navigation .menuBtn {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  navigation .menuBtn i {
+    display: none;
+  }
+  navigation .menuBtn .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    grid-gap: 40px;
+  }
+  navigation .menuBtn .nav__items:nth-last-child(1) {
+    border: 2px solid transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 6px;
+    border-radius: 2px;
+    background-color: #2196F3;
+    -webkit-transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: border-radius 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  navigation .menuBtn .nav__items:nth-last-child(1):hover {
+    background-color: #0B132B;
+    border-radius: 5px;
+  }
+  navigation .menuBtn .nav__items:nth-last-child(1) a {
+    font-size: 0.7rem !important;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  navigation .menuBtn .nav a {
+    font-size: 1rem;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    color: #0B132B;
+  }
+  navigation .menuBtn .nav a:hover {
+    color: #2196F3;
+  }
+}
+
 navigation .logo {
   font-size: 1.4rem;
   display: -webkit-box;
@@ -95,9 +175,19 @@ navigation .logo {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 10px;
+  margin: 20px;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+@media screen and (min-width: 668px) {
+  navigation .logo {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 /*===========navigation end=======*/
@@ -106,6 +196,20 @@ navigation .logo {
   display: -ms-grid;
   display: grid;
   margin: 0px !important;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard {
+    background-color: #536DFE !important;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "l r";
+    background-image: url("./modules/images/bg.jpg");
+    background-position: center;
+    background-clip: border-box;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
 
 .profileCard .name {
@@ -130,6 +234,13 @@ navigation .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__image {
+    grid-area: r;
+  }
 }
 
 .profileCard__image img {
@@ -139,6 +250,26 @@ navigation .logo {
 
 .profileCard__desc {
   padding: 10px;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__desc {
+    grid-area: l;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .profileCard__desc--links {
@@ -156,6 +287,12 @@ navigation .logo {
 .profileCard__desc--links span {
   margin: 5px;
   font-size: 1.6rem;
+}
+
+@media screen and (min-width: 668px) {
+  .profileCard__desc--links span {
+    font-size: 2rem !important;
+  }
 }
 
 .profileCard__desc--intro {
@@ -178,12 +315,46 @@ navigation .logo {
   text-align: center;
 }
 
+@media screen and (min-width: 668px) {
+  .profileCard__desc--intro p {
+    width: 80%;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
 /*===========profileCard end=======*/
+/* content-top === container ===*/
+.contentTop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 668px) {
+  .contentTop {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .contentTop__child {
+    grid-column: 2/-2;
+  }
+}
+
+/* content-top === container ===*/
 /*==========buttons==========*/
 .button {
   border: 1px solid transparent;
   background-color: #2196F3;
   padding: 10px;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
 }
 
 .button__link {
@@ -191,11 +362,35 @@ navigation .logo {
   text-decoration: none;
 }
 
+.button:hover {
+  background-color: #536DFE;
+}
+
+.btn-aboutMe {
+  -ms-flex-item-align: end !important;
+      align-self: flex-end !important;
+  justify-self: flex-end !important;
+}
+
+@media screen and (min-width: 668px) {
+  .calltoAction-btn {
+    width: 40%;
+    padding: 0;
+    margin: 0px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    height: 40%;
+  }
+}
+
 /*==========buttons ends==========*/
 /*==========cards==========*/
 .card, .profileCard, .projectCard {
   background-color: #0B132B;
-  color: white;
+  color: #FFFFFF;
   padding: 10px;
   margin: 5px;
 }
@@ -208,7 +403,55 @@ navigation .logo {
   color: #FFFFFF;
 }
 
+.card__heroText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 668px) {
+  .card__heroText {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .card__heroText p {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    justify-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .card__skills img {
+    width: 50% !important;
+  }
+}
+
+.card__skills img {
+  width: 80%;
+}
+
 /*==========projects==========*/
+@media screen and (min-width: 668px) {
+  .project {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 100px;
+  }
+}
+
 .projectCard {
   padding: 0;
   display: -ms-grid;
@@ -256,9 +499,177 @@ navigation .logo {
 }
 
 /*==========projects end==========*/
+/*==========testimony section==========*/
+.testimony {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 60px;
+}
+
+@media screen and (min-width: 668px) {
+  .testimony {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+.testimony__wrapper {
+  border: 1px solid white;
+  background-color: #FFFFFF;
+  color: #0B132B;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.testimony__text {
+  padding-top: 0px;
+  margin-top: 0px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.testimony__text::before {
+  content: "\"";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 3rem;
+  padding: 0px;
+  margin-top: 0px;
+  position: relative;
+  bottom: -40px;
+}
+
+.testimony__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimony__image h4 {
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+.testimony img {
+  max-width: 25%;
+  border-radius: 50%;
+  border: 2px solid #0B132B;
+}
+
+/*==========testimoy end==========*/
+/*=============contact__form=============*/
+.contact__form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.contact__form form .inputForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__form form .inputForm input {
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact__form form .inputForm input::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm input:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm input::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm textarea {
+  height: 70%;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact__form form .inputForm textarea::-webkit-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm textarea:-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm textarea::-ms-input-placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .inputForm textarea::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 15px;
+  color: #0B132B;
+}
+
+.contact__form form .submit-btn {
+  color: white;
+}
+
+/*=============contact__form end=============*/
 /*==========menu footer==========*/
 .fixedmenu {
-  padding: 0px;
+  padding: 15px;
+  padding-bottom: 0px;
+  padding-left: 0px;
   margin: 0px;
   position: fixed;
   bottom: 0px;
@@ -267,6 +678,12 @@ navigation .logo {
   height: 10%;
   -webkit-box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
           box-shadow: 1px -3px 3px -1px rgba(0, 0, 0, 0.082);
+}
+
+@media screen and (min-width: 668px) {
+  .fixedmenu {
+    display: none;
+  }
 }
 
 .fixedmenu__ul {

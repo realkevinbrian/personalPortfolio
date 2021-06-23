@@ -7,7 +7,7 @@
 
 @mixin flexBox ($direction){
     display: flex;
-    grid-template-columns:row;
+    grid-template-columns:$direction;
 }
 
 @mixin  centerGrid ($column){
@@ -39,10 +39,7 @@
 }
 
 
-@mixin  darkTheme {
-    background-color: $primary-color-dark;
-    color: white;
-}
+
 
 @mixin sectionTitle{
     text-align: center;
@@ -51,3 +48,31 @@
     padding: 15px;
 
 }
+
+
+// Themes
+
+@mixin  darkTheme {
+    background-color: $primary-color-dark;
+    color: $primary-color-text;
+}
+
+@mixin  lightTheme {
+    background-color: $primary-color-text;
+    color: $primary-color-dark;
+}
+
+
+
+
+/* ===========responsive=============*/
+
+@mixin desktop ($column){
+
+    display: grid;
+    grid-template-columns: $column;
+
+}
+
+
+/* ===========responsive=============*/
