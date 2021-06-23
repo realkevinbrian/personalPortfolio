@@ -343,6 +343,7 @@ navigation{
 
     &__title{
         color: $primary-color-text;
+        @include gridBox(1fr 1fr)
         
     }
 
@@ -475,6 +476,7 @@ navigation{
         margin-top: 0px;
         font-size: 1.4rem;
         font-weight: bold;
+        
         
 
         &::before{
@@ -675,3 +677,43 @@ navigation{
 }
 
 /*section_title end*/
+
+
+
+/*----balls-------*/
+
+.balls{
+
+    // border: 2px solid red;
+    width: 90px;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    div{
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin: 3px;
+
+        &:nth-child(1){
+            background-color: rgb(14, 188, 231);
+
+        }
+
+        &:nth-child(2){
+            background-color: rgb(0, 255, 115);
+
+        }
+
+        &:nth-child(3){
+            background-color: rgb(0, 255, 191);
+
+        }
+        
+        
+    }
+    
+}
