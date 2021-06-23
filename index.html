@@ -14,10 +14,19 @@
     <App><!-----App container--->
 
     <!-- navigation -->
-    <navigation>
+    <navigation data-aos="fade-in">
 
         <div class="menuBtn">
             <i class="uil uil-align-left"></i>
+
+            <ul class="nav">
+                <li class="nav__items active"><a href="index.html">Home</a></li>
+                <li class="nav__items"><a href="#aboutMe">About me</a></li>
+                <li class="nav__items"><a href="#projects">Projects</a></li>
+                <li class="nav__items"><a href="#">Services</a></li>
+                <li class="nav__items"><a href="#">Blog</a></li>
+                <li class="nav__items"><a href="#">Contact us</a></li>
+            </ul>
         </div>
 
         <div class="logo">
@@ -65,54 +74,62 @@
 
     <content><!-----content container--->
 
-        <!--==============
-            about me card
-            ===========
-        -->
-        <div class="card card__heroText"><!----card about me-->
-                <p class="card__text">
-                    Let's build your next Project 
-                </p>
-                <button class="card__button button">
-                    <a href="#" class="button__link">Get in Touch</a>
-                </button>
-        </div><!--about me end-->
+        <div class="contentTop">
 
-        <div class="card card__aboutMe" data-aos="zoom-in-out"><!-----card about me-->
+            <div class="contentTop__child">
 
-            <div class="card__title">
-                <h5>About me</h5>
+                <!--==============
+                about me card
+                ===========
+            -->
+                <div class="card card__heroText"><!----card about me-->
+                    <p class="card__text">
+                        Let's build your next Project 
+                    </p>
+                    <button class="card__button button calltoAction-btn">
+                        <a href="#contactMe" class="button__link">Get in Touch</a>
+                    </button>
+            </div><!--about me end-->
+    
+            <div class="card card__aboutMe" data-aos="zoom-in-out" id="aboutMe"><!-----card about me-->
+    
+                <div class="card__title">
+                    <h5>About me</h5>
+                </div>
+    
+                <div class="card__text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
+                    </p>
+                </div>
+    
+            </div><!-----card end about me-->
+    
+            <div class="card card__skills" data-aos="zoom-in-out"><!-----skills-->
+    
+                <div class="card__title">
+                    <h5>Skills</h5>
+                </div>
+    
+                <div class="card__text">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
+                    </p>
+                </div>
+    
+                <div class="card__text">
+                    <p>
+                        <img src="./assets/images/skills.svg" alt="">
+                    </p>
+                </div>
+    
+            </div><!-----skills end-->
+    
             </div>
 
-            <div class="card__text">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
-                </p>
-            </div>
 
-        </div><!-----card end about me-->
-
-        <div class="card card__skills" data-aos="zoom-in-out"><!-----skills-->
-
-            <div class="card__title">
-                <h5>Skills</h5>
-            </div>
-
-            <div class="card__text">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
-                </p>
-            </div>
-
-            <div class="card__text">
-                <p>
-                    <img src="./assets/images/skills.svg" alt="">
-                </p>
-            </div>
-
-        </div><!-----skills end-->
-
-        <h4 class="section_title">Projects</h4>
+        </div>
+        <h4 class="section_title" id="projects">Projects</h4>
 
         <section class="project"><!---projects section end-->
 
@@ -189,30 +206,137 @@
 
     </content><!-----content container end--->
 
+    <div class="contentTop">
+
+        <div class="contentTop__child">
+            <div class="card card__aboutMe" data-aos="zoom-in-out" id="aboutMe"><!-----card about me-->
+
+                <div class="card__title">
+                    <h5>Testimonies</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusantium excepturi dolores atque quidem commodi? Maxime error voluptas nostrum voluptatum.
+                    </p>
+                </div>
+
+
+
+                <div class="testimony">
+                    
+                    <div class="testimony__wrapper">
+
+                        <div class="testimony__text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim voluptatibus corrupti libero doloribus impedit, suscipit voluptas? Eius, voluptatem iusto minima quis impedit, nobis neque non, numquam optio eos error?
+                            </p>
+                        </div>
+
+                        
+                        <div class="testimony__image">
+                            <h4>Kevin</h4>
+                            <img src="./assets/images/profile (1).png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="testimony__wrapper">
+
+                        <div class="testimony__text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim voluptatibus corrupti libero doloribus impedit, suscipit voluptas? Eius, voluptatem iusto minima quis impedit, nobis neque non, numquam optio eos error?
+                            </p>
+                        </div>
+
+                        
+                        <div class="testimony__image">
+                            <h4>Kevin</h4>
+                            <img src="./assets/images/profile (2).png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-----testimonies-->
+
+            <!--==============
+            about me card
+            ===========
+        -->
+        <div class="card card__heroText"><!----card about me-->
+            <p class="card__text">
+                Let's build your next Project 
+            </p>
+            <button class="card__button button calltoAction-btn">
+                <a href="#" class="button__link">Send Direct Message</a>
+            </button>
+    </div><!--about me end-->
+
+
+
+
+            <div class="card contact" data-aos="slide-up" id="contactMe"><!-----contact-->
+
+                <div class="contact__title">
+                    <h5>contact Form</h5>
+                </div>
+
+                <div class="contact__form">
+
+                    <form action="">
+
+                        <div class="inputForm">
+                            <input type="text" name="name" placeholder="Name">
+                        </div>
+
+                        <div class="inputForm">
+                            <input type="email" name="Email" placeholder="Email">
+                        </div>
+
+                        <div class="inputForm">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        </div>
+
+                        <div class="inputForm">
+                            <input type="submit" name="Send Message" class="card__button button submit-btn">
+                        </div>
+
+                        
+                    </form>
+                    
+                </div>
+            </div><!-----skills end-->
+
+            
+            
+
+        </div>
+    </div>
+
     </App><!-----App container--->
 
-    <menu class="fixedmenu">
+    <menu class="fixedmenu" data-aos="slide-up">
 
         <ul class="fixedmenu__ul">
 
             <li class="fixedmenu__items fixedmenu__items--active">
-                <span><i class="uil uil-fast-mail"></i></span>
+                <span><a href="#contactMe"><i class="uil uil-fast-mail"></i></a></span>
                 <span>Send Email</span>
             </li>
 
             <li class="fixedmenu__items">
-                <span><i class="uil uil-user"></i></span>
+                <span><a href="index.html"><i class="uil uil-user"></i></a></span>
                 <span>profile</span>
             </li>
 
             <li class="fixedmenu__items">
-                <span><i class="uil uil-feedback"></i></span>
+                <span><a href="#contactMe"><i class="uil uil-feedback"></i></a></span>
                 <span>Services</span>
             </li>
 
             <li class="fixedmenu__items">
                 <span>
+                    <a href="#contactMe">
                     <i class="uil uil-blogger-alt"></i>
+                    </a>
                 </span>
                 <span>Blog</span>
             </li>
@@ -224,14 +348,16 @@
         
 
     </menu>
+
+
    <script src="./assets/script/App.js"></script>
    <script src="node_modules/aos/dist/aos.js"></script>
    <script>
     AOS.init({
-      offset: 200,
-      duration: 600,
+      offset: 150,
+      duration: 300,
       easing: 'ease-in-cubic',
-      delay: 100,
+      delay: 80,
     });
   </script>
    
