@@ -449,8 +449,9 @@ navigation{
     grid-gap: $pad * 6;
 
     @media screen and (min-width:$tablets){
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: $pad;
+        
     }
 
 
@@ -463,6 +464,7 @@ navigation{
         color: $primary-color-dark;
         padding: $pad * 2;
         padding-top: 0px;
+        border-radius: 10px;
 
     
 
@@ -506,6 +508,13 @@ navigation{
             
         }
 
+        @media screen and (min-width:$tablets){
+
+            img{
+                width: 10%;
+            }
+        }
+
 
     }
 
@@ -521,6 +530,24 @@ navigation{
 /*==========testimoy end==========*/
 
 /*=============contact__form=============*/
+
+.contact{
+
+    &__title{
+
+        @include centerFlex(column);
+        padding: $marg + 20;
+        
+        @media screen and (min-width:$tablets){
+
+            font-size: $logo-size + 0.3;
+            @include centerFlex(column);
+        }
+        
+    }
+}
+
+
 .contact__form{
     
     form{
@@ -550,7 +577,7 @@ navigation{
                 }   
             }
             textarea{
-                height: 70%;
+                height: 100%;
                 border: 1px solid transparent;
                 border-radius: 2px;
                 font-size: 1.2rem;
@@ -574,8 +601,15 @@ navigation{
 
         }
 
+        .submit{
+            @include centerFlex(column);
+            
+        }
+
         .submit-btn{
             color: white;
+            width: 30%;
+           
         }
         
 

@@ -19,8 +19,11 @@
 
 
 @mixin  centerFlex ($direction){
-
-    @include flexBox($direction);
+    display: flex;
+    grid-template-columns:$direction;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     align-items: center;
     
 

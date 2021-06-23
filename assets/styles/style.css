@@ -512,8 +512,8 @@ navigation .logo {
 
 @media screen and (min-width: 668px) {
   .testimony {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
 }
@@ -524,6 +524,7 @@ navigation .logo {
   color: #0B132B;
   padding: 20px;
   padding-top: 0px;
+  border-radius: 10px;
 }
 
 .testimony__text {
@@ -562,6 +563,12 @@ navigation .logo {
   margin: 10px;
 }
 
+@media screen and (min-width: 668px) {
+  .testimony__image img {
+    width: 10%;
+  }
+}
+
 .testimony img {
   max-width: 25%;
   border-radius: 50%;
@@ -570,6 +577,44 @@ navigation .logo {
 
 /*==========testimoy end==========*/
 /*=============contact__form=============*/
+.contact__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: column;
+      grid-template-columns: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+@media screen and (min-width: 668px) {
+  .contact__title {
+    font-size: 1.7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-columns: column;
+        grid-template-columns: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    align-items: center;
+  }
+}
+
 .contact__form form {
   display: -ms-grid;
   display: grid;
@@ -626,7 +671,7 @@ navigation .logo {
 }
 
 .contact__form form .inputForm textarea {
-  height: 70%;
+  height: 100%;
   border: 1px solid transparent;
   border-radius: 2px;
   font-size: 1.2rem;
@@ -662,8 +707,26 @@ navigation .logo {
   color: #0B132B;
 }
 
+.contact__form form .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-columns: column;
+      grid-template-columns: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
 .contact__form form .submit-btn {
   color: white;
+  width: 30%;
 }
 
 /*=============contact__form end=============*/
