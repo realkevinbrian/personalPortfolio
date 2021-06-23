@@ -63,7 +63,7 @@ App{
 /*===========navigation=======*/
 
 navigation{
-    @include gridBox(1fr 1fr);
+    @include gridBox(1fr);
     padding: 10px;
     box-shadow: 3px 2px 3px -1px rgba(140,140,140,0.5);
     position: fixed;
@@ -92,7 +92,7 @@ navigation{
             }
 
             .nav{
-
+                
                 display: flex;
                 flex-direction: row;
                 grid-gap: $pad + 30;
@@ -151,11 +151,10 @@ navigation{
 
     .logo{
         font-size: $logo-size;
-        @include alignFlexCenter();
-        justify-content: flex-end;
         margin: 20px;
         margin-bottom: 0px;
         margin-top: 0px;
+        @include centerFlex(column);
 
         @media screen and (min-width:$tablets){
             grid-row: 1;
