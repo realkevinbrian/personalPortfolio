@@ -1,0 +1,187 @@
+@import "../node_modules/easyscss-kevin/components/functions.scss";
+@import "../node_modules/easyscss-kevin/components/components.scss";
+@import "varibles";
+
+@media screen and (max-width:920px){
+
+    App{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /*======head====*/
+    section.head{
+        display: grid;
+        background-color: $color-primary-4;
+    // navigation bar
+    nav{
+        background-color: $main-text-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        logo{
+            padding: 0px;
+            h4{
+                margin: 10px;
+                color: $color-primary-4;
+            }
+        }
+    }
+    // navigationbar
+
+    //===========profileImage
+    profile{
+        /*<---profileImage---*/
+        profileImage{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            img{
+                margin: 30px;
+                display: block;
+                width: 80%;
+                max-width: 55%;
+                max-height: 99%;
+                border-radius: 50%;
+            }
+
+        }/*<---profileImage end---*/
+
+        /*<---profile description---*/
+
+        profile_desc{
+
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            
+            name{
+                
+                *{
+                    margin-top: 0px;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            desc{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+
+                socialmedia{
+                    display: flex;
+                    flex-direction: column;
+                    a{
+                        color: $main-text-color;
+                    }
+                }
+
+                p{
+                    margin-top: 3px;
+                    padding: 20px;
+                    padding-top: 0px;
+                }
+            }
+        }
+
+        /*<---profile description---*/
+
+
+    }
+    //==========profileImage end
+
+    /*======head end====*/
+
+
+    }
+    /*======head====*/
+
+    // =========body
+
+    section.body{
+        display: grid;
+        grid-gap: 2px;
+
+        contentCard.card{
+            margin: 5px;
+            @include Card($color-primary-4);
+            button{
+                @include button($main-text-color,$color-primary-2,14px,105px,30px,black,4px);
+            }
+            .card__title{
+                *{
+                    margin: 2px;
+                }
+            }
+        }
+
+        /*======project===*/
+
+        projects{
+            display: grid;
+            padding: 5px;
+            grid-gap: 10px;
+
+            Projectcard.card{
+                @include Card($color-primary-3);
+
+                .card__img{
+                    padding: 2px;
+                }
+                .card__title{
+                    *{
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+                .card__desc{
+                    
+                    p{
+                        margin: 10px;
+                    }
+                }
+                .card__button{
+                    button{
+                        @include button($btn-BG, $btn-Hover, $btn-FS,120px,40px,white,2px);   
+                    }  
+                }
+            
+            }
+        }
+    }
+    // =========body
+
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        position:fixed;
+        width: 100%;
+        bottom: 0px;
+        background-color: $main-text-color;
+        &__link{
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+            font-weight: bold;
+            color: $color-primary-4;
+            margin: 4px;
+            grid-gap: 0px;
+            span a{
+                font-size: 1.8rem;
+                color: $color-primary-4;
+                margin: 0px;
+            } 
+            span:nth-child(2) {
+                margin: 0px;
+                font-size: 1rem;
+                display: none;
+            }   
+        }
+    }
+}
+
+
+
+

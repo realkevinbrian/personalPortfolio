@@ -5,409 +5,240 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Kevin Brian | Personal Portfolio</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!-- styles link -->
+    <link rel="stylesheet" href="/styles/style.css">
+    <!-- cdn links -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="node_modules/@icon/unicons/unicons.css">
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" integrity="sha512-ksbpl5EUb4HLEKUNItsPMT/Ih6KcISE53GbYOu3xFUVYvTSSX5AJxTI2aigdQm9uNSkSsRMHsSGNKppkt691lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  
 </head>
-<body>
 
-    <App><!-----App container--->
+<App>
 
-    <!-- navigation -->
-    <navigation data-aos="fade-in">
+    <section class="head"><!----header-->
 
-        <div class="menuBtn">
-            <i class="uil uil-align-left"></i>
+        <nav><!----nav bar-->
+            <logo>
+                <h4>CoderX</h4>
+            </logo>
+        </nav><!----navbar end-->
 
-            <ul class="nav">
-                <li class="nav__items active"><a href="index.html">Home</a></li>
-                <li class="nav__items"><a href="#aboutMe">About me</a></li>
-                <li class="nav__items"><a href="#projects">Projects</a></li>
-                <!-- <li class="nav__items"><a href="#">Services</a></li> -->
-                <li class="nav__items"><a href="https://realkevinbrian.hashnode.dev">Blog</a></li>
-                <li class="nav__items"><a href="#contactMe">Contact us</a></li>
-            </ul>
-        </div>
+        <profile>
 
-        <div class="logo">
-            <h5>CoderX</h5>
-        </div>
+            <profileImage>
+            
+                    <img src="./assets/images/profile (1).png" alt="profile Image">
+                
+            </profileImage>
 
-    </navigation>
-    <!-- navigation end-->
+            <profile_desc>
 
-    <!-- profile view -->
-    <profile class="profileCard">
+                <name>
+                    <h4>Kevin Brian</h4>
+                </name>
+                <desc>
 
-        <div class="profileCard__image"><!----profile image-->
-            <img src="./assets/images/profile (1).png" alt="">
-        </div><!----profile image end-->
-
-        <div class="profileCard__desc"><!----profile image-->
-
-            <h4 class="name">Kevin Brian</h4><!---name-->
-
-            <div class="profileCard__desc--links"><!---social media links-->
-
-                <span>
-                    <i class='bx bxl-github'></i>
-                </span><!---github-->
-                <span>
-                    <i class='bx bxl-linkedin-square' ></i>
-                </span><!---linkedIn-->
-                <span>
-                    <i class='bx bxl-twitter' ></i>
-                </span><!---twitter-->
-                <span>
-                    <i class='bx bxl-instagram' ></i>
-                </span><!---instagram-->
-
-            </div><!---social media links end-->
-
-            <div class="profileCard__desc--intro">
-                <p id="typeWriter">
-                </p>
-            </div>
-        </div><!----profile image end-->
-    </profile>
-    <!-- profile view end-->
-
-    <content><!-----content container--->
-
-        <div class="contentTop">
-
-            <div class="contentTop__child">
-
-                <!--==============
-                about me card
-                ===========
-            -->
-                <div class="card card__heroText"><!----card about me-->
-                    <p class="card__text">
-                        Let's build your next Project 
-                    </p>
-                    <button class="card__button button calltoAction-btn">
-                        <a href="#contactMe" class="button__link">Get in Touch</a>
-                    </button>
-            </div><!--about me end-->
-    
-            <div class="card card__aboutMe" data-aos="zoom-in-out" id="aboutMe"><!-----card about me-->
-    
-                <div class="card__title">
-                    <h5>About me</h5>
-
-                    <!----balls-->
-                    <div class="balls">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <!----balls-->
-
-                </div>
-    
-                <div class="card__text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
-                    </p>
-                </div>
-    
-            </div><!-----card end about me-->
-    
-            <div class="card card__skills" data-aos="zoom-in-out"><!-----skills-->
-    
-                <div class="card__title">
-                    <h5>Skills</h5>
-                    <!----balls-->
-                    <div class="balls">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <!----balls-->
-                </div>
-    
-                <div class="card__text">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita veritatis vel earum recusandae magni quae quaerat nobis consequuntur minima id.
-                    </p>
-                </div>
-    
-                <div class="card__text">
-                    <p>
-                        <img src="./assets/images/skills.svg" alt="">
-                    </p>
-                </div>
-    
-            </div><!-----skills end-->
-    
-            </div>
-
-
-        </div>
-        <h4 class="section_title" id="projects">Projects</h4>
-
-        <section class="project"><!---projects section end-->
-
-            <div class="projectCard" data-aos="zoom-in">
-
-                <div class="projectCard__img">
-                    <img src="/assets/images/projects/image1.jpg" alt="">
-                </div>
-
-                <div class="projectCard__title">
-                    <h5>Project Title</h5>
-                </div>
-
-                <div class="projectCard__desc">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia omnis possimus ut quaerat alias quidem sint totam minima natus.
-                    </p>
-                </div>
-
-                <div class="projectCard__links">
-                    <button class="button"><a class="button__link">Visit Site</a></button>
-                    <button class="button"><a class="button__link">Github</a></button>
-                </div>
-
-            </div>
-
-            <div class="projectCard" data-aos="slide-up">
-
-                <div class="projectCard__img">
-                    <img src="/assets/images/projects/image2.jpg" alt="">
-                </div>
-
-                <div class="projectCard__title">
-                    <h5>Project Title</h5>
-                </div>
-
-                <div class="projectCard__desc">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia omnis possimus ut quaerat alias quidem sint totam minima natus.
-                    </p>
-                </div>
-
-                <div class="projectCard__links">
-                    <button class="button"><a class="button__link">Visit Site</a></button>
-                    <button class="button"><a class="button__link">Github</a></button>
-                </div>
-
-            </div>
-
-            <div class="projectCard" data-aos="zoom-in">
-
-                <div class="projectCard__img">
-                    <img src="/assets/images/projects/image4.jpg" alt="">
-                </div>
-
-                <div class="projectCard__title">
-                    <h5>Project Title</h5>
-                </div>
-
-                <div class="projectCard__desc">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia omnis possimus ut quaerat alias quidem sint totam minima natus.
-                    </p>
-                </div>
-
-                <div class="projectCard__links">
-                    <button class="button"><a class="button__link">Visit Site</a></button>
-                    <button class="button"><a class="button__link">Github</a></button>
-                </div>
-
-            </div>
-
-            <div class="projectCard" data-aos="slide-up">
-
-                <div class="projectCard__img">
-                    <img src="/assets/images/projects/image4.jpg" alt="">
-                </div>
-
-                <div class="projectCard__title">
-                    <h5>Project Title</h5>
-                </div>
-
-                <div class="projectCard__desc">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia omnis possimus ut quaerat alias quidem sint totam minima natus.
-                    </p>
-                </div>
-
-                <div class="projectCard__links">
-                    <button class="button"><a class="button__link">Visit Site</a></button>
-                    <button class="button"><a class="button__link">Github</a></button>
-                </div>
-
-            </div>
-
-        </section><!---projects section end-->
-
-        <div class="contentTop">
-
-            <div class="contentTop__child">
-                <div class="card card__aboutMe" data-aos="zoom-in-out" id="aboutMe"><!-----card about me-->
-    
-                    <div class="testimoniesCard__title">
-                        <h5>Testimonies</h5>
-    
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusantium excepturi dolores atque quidem commodi? Maxime error voluptas nostrum voluptatum.
-                        </p>
-                    </div>
-    
-    
-    
-                    <div class="testimony">
+                    <socialmedia class="subheading1">
                         
-                        <div class="testimony__wrapper">
-    
-                            <div class="testimony__text">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim voluptatibus corrupti libero doloribus impedit, suscipit voluptas? Eius, voluptatem iusto minima quis impedit, nobis neque non, numquam optio eos error?
-                                </p>
-                            </div>
-    
-                            
-                            <div class="testimony__image">
-                                <h4>Kevin</h4>
-                                <img src="./assets/images/profile (1).png" alt="">
-                            </div>
+                        <div>
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-github' ></i>
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-linkedin' >
+                                </i>
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-instagram' ></i>
+                            </a>
+                        </span>
+
                         </div>
-    
-                        <div class="testimony__wrapper">
-    
-                            <div class="testimony__text">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis enim voluptatibus corrupti libero doloribus impedit, suscipit voluptas? Eius, voluptatem iusto minima quis impedit, nobis neque non, numquam optio eos error?
-                                </p>
-                            </div>
-    
-                            
-                            <div class="testimony__image">
-                                <h4>Kevin</h4>
-                                <img src="./assets/images/profile (2).png" alt="">
-                            </div>
-                        </div>
-    
-                    </div>
-    
-                </div><!-----testimonies-->
-    
-                <!--==============
-                about me card
-                ===========
-            -->
-            <div class="card card__heroText"><!----card about me-->
-                <p class="card__text">
-                    Let's build your next Project 
+                    </socialmedia>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id optio quas tenetur est, aperiam pariatur!
+                    </p>
+                </desc>
+
+            </profile_desc>
+        </profile>
+
+    </section><!----header end-->
+
+    <section class="body">
+
+        <contentCard class="card">
+
+            <div class="card__desc">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.
                 </p>
-                <button class="card__button button calltoAction-btn">
-                    <a href="#" class="button__link">Send Direct Message</a>
+            </div>
+
+            <div class="card__button">
+                
+                <button>
+                    <a href="#">Call us</a>
                 </button>
-        </div><!--about me end-->
-    
-    
-    
-    
-                <div class="card contact" data-aos="slide-up" id="contactMe"><!-----contact-->
-    
-                    <div class="contact__title">
-                        <h5>contact Form</h5>
-                    </div>
-    
-                    <div class="contact__form">
-    
-                        <form action="">
-    
-                            <div class="inputForm">
-                                <input type="text" name="name" placeholder="Name">
-                            </div>
-    
-                            <div class="inputForm">
-                                <input type="email" name="Email" placeholder="Email">
-                            </div>
-    
-                            <div class="inputForm">
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                            </div>
-    
-                            <div class="inputForm submit">
-                                <button type="submit" name="message" class="card__button button submit-btn">Send Message</button>
-                            </div>
-                            
-                        </form>
-                        
-                    </div>
-                </div><!-----skills end-->
-    
-                
-                
-    
             </div>
-        </div>
+        </contentCard>
 
-    </content><!-----content container end--->
-    </App><!-----App container--->
+        <contentCard class="card">
 
-    <menu class="fixedmenu" data-aos="slide-up">
+            <div class="card__title">
+                <h4>About</h4>
 
-        <ul class="fixedmenu__ul">
+                <div class="balls">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
 
-            <li class="fixedmenu__items fixedmenu__items--active">
-                <span><a href="#contactMe">
-                    <i class='bx bx-mail-send' ></i>
-                </a></span>
-                <span>Send Email</span>
-            </li>
+            </div>
 
-            <li class="fixedmenu__items">
-                <span><a href="index.html">
-                    <i class='bx bx-user' ></i>
-                </a></span>
-                <span>profile</span>
-            </li>
+            <div class="card__desc">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam.
+                </p>
+            </div>
 
-            <li class="fixedmenu__items">
-                <span><a href="#projects">
-                    <i class='bx bx-library' ></i>
-                </a></span>
-                <span>projects</span>
-            </li>
+            <div class="card__button">
+                
+                <button>
+                    <a href="#">Call us</a>
+                </button>
+            </div>
+        </contentCard>
 
-            <li class="fixedmenu__items">
-                <span>
-                    <a href="https://realkevinbrian.hashnode.dev">
-                        <i class='bx bxl-medium' ></i>
-                    </a>
-                </span>
-                <span>Blog</span>
-            </li>
+        <h4>Project Section</h4>
 
-            
-            
+        <projects>
 
-        </ul>
-        
+            <Projectcard class="card">
 
-    </menu>
+                <div class="card__img">
+                    <img src="./assets/images/projects/image2.jpg" alt="project Image">
+                </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js" integrity="sha512-678bHRnILWQudsPcjDbSoYtwimEk8yPq7BBWeJaFoSHPf7Ob7N7au8M49yY9Wbpmmi0PvDzf3Rca1mbmYQLAxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script src="./assets/script/App.js"></script>
-   <script src="node_modules/aos/dist/aos.js"></script>
-   <script>
-    AOS.init({
-      offset: 150,
-      duration: 300,
-      easing: 'ease-in-cubic',
-      delay: 80
-    });
-  </script>
-   
-   
+                <div class="card__title">
+                    <h4>Project Name</h4>
+                </div>
+
+                <div class="card__desc">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum provident temporibus perspiciatis voluptatibus expedita sapiente?
+                    </p>
+                </div>
+
+                <div class="card__button">
+
+                    <button>
+                        <a href="#">Visit Website</a>
+                    </button>
+
+                    <button>
+                        <a href="#">Github</a>
+                    </button>
+
+                </div>
+
+            </Projectcard>
+
+            <Projectcard class="card">
+
+                <div class="card__img">
+                    <img src="./assets/images/projects/image2.jpg" alt="project Image">
+                </div>
+
+                <div class="card__title">
+                    <h4>Project Name</h4>
+                </div>
+
+                <div class="card__desc">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum provident temporibus perspiciatis voluptatibus expedita sapiente?
+                    </p>
+                </div>
+
+                <div class="card__button">
+
+                    <button>
+                        <a href="#">Visit Website</a>
+                    </button>
+
+                    <button>
+                        <a href="#">Github</a>
+                    </button>
+
+                </div>
+
+            </Projectcard>
+        </projects>
+
+
+    </section>
+</App>
+
+
+<footer class="footer">
+
+    <div class="footer__link">
+        <span>
+           <a href="#"><i class="bx bx-user"></i></a>
+        </span>
+
+        <span>
+            User
+        </span>
+    </div>
+
+    <div class="footer__link">
+        <span>
+            <a href="#"><i class="bx bx-user"></i></a>
+        </span>
+
+        <span>
+            projects
+        </span>
+    </div>
+
+    <div class="footer__link">
+        <span>
+            <a href="#"><i class='bx bxl-medium-old' ></i></a>
+        </span>
+
+        <span>
+            Blog
+        </span>
+    </div>
+
+    <div class="footer__link">
+        <span>
+            <a href=""><i class="bx bx-menu"></i></a>
+        </span>
+
+        <span>
+            Services
+        </span>
+    </div>
+    
+
+</footer>
+
+
+
+
+
+<body>  
 </body>
 </html>

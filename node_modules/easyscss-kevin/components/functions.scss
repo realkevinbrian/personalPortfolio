@@ -1,0 +1,19 @@
+/*display Grid*/
+
+@mixin  displayGrid ($Gridcolumns,$itemAlign){
+    display: grid;
+    grid-template-columns:$Gridcolumns;
+    justify-items: $itemAlign;
+    
+}
+/*display Grid function*/
+
+
+/*display Flex function*/
+@mixin  displayFlex ($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+/*display Grid function*/
+
+

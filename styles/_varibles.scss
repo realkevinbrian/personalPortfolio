@@ -1,0 +1,42 @@
+// ==========colors
+// As hex codes */
+$color-primary-0: #112466;	// Main Primary color */
+$color-primary-1: #13349F;
+$color-primary-2: #152E7E;
+$color-primary-3: #081747;
+$color-primary-4: #050D2A;
+$main-text-color : white;
+
+$btn-BG : rgb(0, 153, 255);
+$btn-Hover:rgb(6, 118, 209);
+$btn-FS : .9rem;
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500');
+
+html,
+body {
+    font-size: 90%;
+    padding: 0px;
+    margin: 0px;
+} /*12px*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  
+}
+
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p{
+        color: $main-text-color;
+    }

@@ -1,0 +1,327 @@
+/*display Grid*/
+/*display Grid function*/
+/*display Flex function*/
+/*display Grid function*/
+/* 
+===============
+button component
+===============
+*/
+/* button endcomponent*/
+/* 
+==============
+card component
+==============
+*/
+/* 
+==============
+card end component
+==============
+*/
+/* 
+==============
+content card component
+==============
+*/
+/* 
+==============
+content card end component
+==============
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500");
+html,
+body {
+  font-size: 90%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*12px*/
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
+
+@media screen and (max-width: 920px) {
+  App {
+    width: 100%;
+    max-width: 100%;
+  }
+  /*======head====*/
+  section.head {
+    display: -ms-grid;
+    display: grid;
+    background-color: #050D2A;
+    /*======head end====*/
+  }
+  section.head nav {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.head nav logo {
+    padding: 0px;
+  }
+  section.head nav logo h4 {
+    margin: 10px;
+    color: #050D2A;
+  }
+  section.head profile {
+    /*<---profileImage---*/
+    /*<---profileImage end---*/
+    /*<---profile description---*/
+    /*<---profile description---*/
+  }
+  section.head profile profileImage {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  section.head profile profileImage img {
+    margin: 30px;
+    display: block;
+    width: 80%;
+    max-width: 55%;
+    max-height: 99%;
+    border-radius: 50%;
+  }
+  section.head profile profile_desc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  section.head profile profile_desc name * {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  section.head profile profile_desc desc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  section.head profile profile_desc desc socialmedia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.head profile profile_desc desc socialmedia a {
+    color: white;
+  }
+  section.head profile profile_desc desc p {
+    margin-top: 3px;
+    padding: 20px;
+    padding-top: 0px;
+  }
+  /*======head====*/
+  section.body {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2px;
+    /*======project===*/
+  }
+  section.body contentCard.card {
+    margin: 5px;
+    background-color: #050D2A;
+  }
+  section.body contentCard.card .card__img {
+    place-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  section.body contentCard.card .card__img img {
+    image-rendering: optimizeSpeed;
+    width: 99%;
+    max-width: 99%;
+    max-height: 90%;
+    display: block;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.body contentCard.card .card__title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+  section.body contentCard.card .card__desc p {
+    margin: 20px;
+  }
+  section.body contentCard.card .card__button {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  section.body contentCard.card .card__button button {
+    margin: 10px;
+  }
+  section.body contentCard.card button {
+    border: 1px solid transparent;
+    width: 105px;
+    height: 30px;
+    font-size: 14px;
+    background-color: white;
+    outline: none;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    border-radius: 4px;
+  }
+  section.body contentCard.card button a {
+    text-decoration: none;
+    color: black;
+  }
+  section.body contentCard.card button:hover {
+    background-color: #152E7E;
+  }
+  section.body contentCard.card .card__title * {
+    margin: 2px;
+  }
+  section.body projects {
+    display: -ms-grid;
+    display: grid;
+    padding: 5px;
+    grid-gap: 10px;
+  }
+  section.body projects Projectcard.card {
+    background-color: #081747;
+  }
+  section.body projects Projectcard.card .card__img {
+    place-items: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  section.body projects Projectcard.card .card__img img {
+    image-rendering: optimizeSpeed;
+    width: 99%;
+    max-width: 99%;
+    max-height: 90%;
+    display: block;
+    -o-object-position: center;
+       object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  section.body projects Projectcard.card .card__title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 20px;
+    padding-bottom: 0px;
+  }
+  section.body projects Projectcard.card .card__desc p {
+    margin: 20px;
+  }
+  section.body projects Projectcard.card .card__button {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  section.body projects Projectcard.card .card__button button {
+    margin: 10px;
+  }
+  section.body projects Projectcard.card .card__img {
+    padding: 2px;
+  }
+  section.body projects Projectcard.card .card__title * {
+    margin: 0px;
+    padding: 0px;
+  }
+  section.body projects Projectcard.card .card__desc p {
+    margin: 10px;
+  }
+  section.body projects Projectcard.card .card__button button {
+    border: 1px solid transparent;
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+    background-color: #0099ff;
+    outline: none;
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    border-radius: 2px;
+  }
+  section.body projects Projectcard.card .card__button button a {
+    text-decoration: none;
+    color: white;
+  }
+  section.body projects Projectcard.card .card__button button:hover {
+    background-color: #0676d1;
+  }
+  .footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+  }
+  .footer__link {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    font-weight: bold;
+    color: #050D2A;
+    margin: 4px;
+    grid-gap: 0px;
+  }
+  .footer__link span a {
+    font-size: 1.8rem;
+    color: #050D2A;
+    margin: 0px;
+  }
+  .footer__link span:nth-child(2) {
+    margin: 0px;
+    font-size: 1rem;
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
