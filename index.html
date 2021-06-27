@@ -12,13 +12,13 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" integrity="sha512-ksbpl5EUb4HLEKUNItsPMT/Ih6KcISE53GbYOu3xFUVYvTSSX5AJxTI2aigdQm9uNSkSsRMHsSGNKppkt691lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
 </head>
 
 <App>
 
     <section class="head"><!----header-->
-
         <nav><!----nav bar-->
             <logo>
                 <h4>CoderX</h4>
@@ -43,6 +43,7 @@
                     <socialmedia class="subheading1">
                         
                         <div>
+
                         <span>
                             <a href="#">
                                 <i class='bx bxl-github' ></i>
@@ -62,6 +63,12 @@
                             </a>
                         </span>
 
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-twitter' ></i>
+                            </a>
+                        </span>
+
                         </div>
                     </socialmedia>
                     <p>
@@ -71,12 +78,11 @@
 
             </profile_desc>
         </profile>
-
     </section><!----header end-->
 
     <section class="body">
 
-        <contentCard class="card">
+        <contentCard class="card" data-aos="zoom-in">
 
             <div class="card__desc">
                 <p>
@@ -92,7 +98,7 @@
             </div>
         </contentCard>
 
-        <contentCard class="card">
+        <contentCard class="card" data-aos="zoom-in">
 
             <div class="card__title">
                 <h4>About</h4>
@@ -118,11 +124,37 @@
             </div>
         </contentCard>
 
-        <h4>Project Section</h4>
+        <contentCard class="card" data-aos="zoom-in">
+
+            <div class="card__title">
+                <h4>Skills</h4>
+                <div class="balls">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+
+            <div class="card__desc">
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta beatae accusamus et nesciunt? Voluptatibus culpa perferendis iste modi id!
+                </p>
+            </div>
+
+            <!-- <div class="card__button">
+                
+                <button>
+                    <a href="#">Call us</a>
+                </button>
+            </div> -->
+        </contentCard>
+
+        <h4 class="title">Recent Projects</h4>
 
         <projects>
 
-            <Projectcard class="card">
+            <Projectcard class="card" data-aos="slide-up">
 
                 <div class="card__img">
                     <img src="./assets/images/projects/image2.jpg" alt="project Image">
@@ -152,7 +184,7 @@
 
             </Projectcard>
 
-            <Projectcard class="card">
+            <Projectcard class="card" data-aos="slide-up">
 
                 <div class="card__img">
                     <img src="./assets/images/projects/image2.jpg" alt="project Image">
@@ -182,6 +214,98 @@
 
             </Projectcard>
         </projects>
+
+        <span class="moreProjects" data-aos="slide-left"><a href="#">More Projects</a></span>
+        <hr id="separator">
+
+        <contentCard class="card">
+
+            <div class="card__title">
+                <h4>Testemonies</h4>
+                <div class="balls">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+
+            <div class="card__desc">
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, assumenda!
+                </p>
+
+                <div class="testimonyWrapper" data-aos="fade">
+                    
+                    <div class="testimony" data-aos="zoom-in">
+
+                        <div class="testimony__img">
+                            <span>Kevin Brian</span>
+                            <img src="./assets/images/profile (2).png" alt="Testimony Image">
+                        </div>
+
+                        <div class="testimony__text">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, at cumque eaque ut error modi perspiciatis illum aspernatur quos beatae!
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <hr id="testimonySeparator" data-aos="top-bottom">
+
+                    <div class="testimony" data-aos="zoom-in">
+
+                        <div class="testimony__img">
+                            <span>Kevin Brian</span>
+                            <img src="./assets/images/image.jpg" alt="Testimony Image">
+                        </div>
+
+                        <div class="testimony__text">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, at cumque eaque ut error modi perspiciatis illum aspernatur quos beatae!
+                            </p>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <!-- <div class="card__button">
+                
+                <button>
+                    <a href="#">Call us</a>
+                </button>
+            </div> -->
+        </contentCard>
+
+        <contentCard class="card">
+
+            <div class="card__title">
+                <h4></h4>
+                <div class="balls">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+
+            <div class="card__desc">
+                <p> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta beatae accusamus et nesciunt? Voluptatibus culpa perferendis iste modi id!
+                </p>
+            </div>
+
+            <div class="card__button">
+                
+                <button>
+                    <a href="#">Get in Touch</a>
+                </button>
+            </div>
+        </contentCard>
     </section>
 
 </App>
@@ -230,9 +354,18 @@
     </div>
 </footer>
 
+<script src="./node_modules/aos/dist/aos.js"></script>
 
 
 
+<script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 
 <body>  
 </body>

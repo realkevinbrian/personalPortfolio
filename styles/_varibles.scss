@@ -46,3 +46,36 @@ body {
     }
 
     
+
+
+
+
+
+    @keyframes rotate {
+
+        from{
+            // transform:translateY(40px);
+            border: 2px dashed white;
+            opacity: 0.9;
+        }
+        
+        to{
+            // transform:translateY(40px);
+            border: 2px solid rgb(185, 7, 67);
+            opacity: 1;
+        }
+    }
+
+@keyframes colorAnimate {
+        0%{
+        background-position:0% 63%;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        }
+        50%{background-position:100% 38%;
+        border-bottom-color: white;
+        border-right-color: white;
+        }
+        100%{background-position:0% 63%}
+    }
+    
