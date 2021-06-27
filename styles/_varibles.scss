@@ -9,7 +9,7 @@ $main-text-color : white;
 
 $btn-BG : rgb(0, 153, 255);
 $btn-Hover:rgb(6, 118, 209);
-$btn-FS : .9rem;
+$btn-FS :1rem;
 
 
 // Typography
@@ -36,7 +36,13 @@ body {
     h3,
     h4,
     h5,
-    h6,
+    h6{
+        color: $main-text-color;
+        font-size: 1.3rem;
+    }
     p{
         color: $main-text-color;
+        font-size: 1.1rem;
     }
+
+    

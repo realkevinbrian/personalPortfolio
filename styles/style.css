@@ -48,9 +48,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: white;
+  font-size: 1.3rem;
+}
+
 p {
   color: white;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 920px) {
@@ -161,6 +166,7 @@ p {
     justify-items: center;
   }
   section.body contentCard.card .card__img img {
+    display: block;
     image-rendering: optimizeSpeed;
     width: 99%;
     max-width: 99%;
@@ -174,28 +180,63 @@ p {
   section.body contentCard.card .card__title {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 20px;
-    padding-bottom: 0px;
-  }
-  section.body contentCard.card .card__desc p {
-    margin: 20px;
-  }
-  section.body contentCard.card .card__button {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
   }
-  section.body contentCard.card .card__button button {
-    margin: 10px;
+  section.body contentCard.card .card__title .balls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  section.body contentCard.card .card__title .balls div {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    margin: 1.4%;
+    border-radius: 50%;
+  }
+  section.body contentCard.card .card__title .balls div:nth-child(1) {
+    background-color: #06ca58;
+  }
+  section.body contentCard.card .card__title .balls div:nth-child(2) {
+    background-color: #ca0668;
+  }
+  section.body contentCard.card .card__title .balls div:nth-child(3) {
+    background-color: #00ff40;
+  }
+  section.body contentCard.card .card__desc {
+    padding: 15px;
+    padding-top: 0px;
+  }
+  section.body contentCard.card .card__desc p {
+    padding-top: 0px;
+  }
+  section.body contentCard.card .card__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
   }
   section.body contentCard.card button {
     border: 1px solid transparent;
-    width: 105px;
+    width: 40vw;
     height: 30px;
     font-size: 14px;
     background-color: white;
@@ -276,9 +317,9 @@ p {
   }
   section.body projects Projectcard.card .card__button button {
     border: 1px solid transparent;
-    width: 120px;
+    width: 40vw;
     height: 40px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     background-color: #0099ff;
     outline: none;
     -webkit-transition: background-color 0.5s;

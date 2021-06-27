@@ -106,9 +106,9 @@
 
         contentCard.card{
             margin: 5px;
-            @include Card($color-primary-4);
+            @include contentCard($color-primary-4);
             button{
-                @include button($main-text-color,$color-primary-2,14px,105px,30px,black,4px);
+                @include button($main-text-color,$color-primary-2,14px,40vw,30px,black,4px);
             }
             .card__title{
                 *{
@@ -144,7 +144,7 @@
                 }
                 .card__button{
                     button{
-                        @include button($btn-BG, $btn-Hover, $btn-FS,120px,40px,white,2px);   
+                        @include button($btn-BG, $btn-Hover, $btn-FS,40vw,40px,white,2px);   
                     }  
                 }
             
