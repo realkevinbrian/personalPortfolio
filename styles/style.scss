@@ -5,6 +5,38 @@
 
 @media screen and (max-width:920px){
 
+
+
+    // about me section
+
+    .about_me{
+
+    img{
+        width: 70%!important;
+        padding: 50px;
+        z-index: 1000;
+        border-radius: 20px!important;  
+    }
+
+    
+    &::before{
+        position: absolute;
+        content: "";
+        width: 60%;
+        height: 50%;
+        // background-color: rgb(255, 255, 255);
+        transform: translateX(30px) translateY(20px);
+        // border-radius: 10px;
+        border: 5px solid rgb(255, 255, 255);
+
+        
+    }
+
+}
+
+
+    // end
+
     body{
         background-color: rgb(245, 252, 255);
     }
@@ -56,6 +88,7 @@
     App{
         width: 100%;
         max-width: 100%;
+        
     }
 
     /*======head====*/
@@ -88,7 +121,7 @@
                 animation:colorAnimate 6s ease infinite;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
         }
     }
@@ -364,7 +397,7 @@
 
     .footer{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(5,1fr);
         position:fixed;
         width: 100%;
         bottom: 0px;
@@ -384,8 +417,8 @@
             } 
             span:nth-child(2) {
                 margin: 0px;
-                font-size: 1rem;
-                display: none;
+                font-size: .8rem;
+                // display: none;
 
             }   
         }

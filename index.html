@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
 </head>
+<body>
 
 <App>
 
@@ -45,26 +46,32 @@
                         <div>
 
                         <span>
-                            <a href="#">
+                            <a href="https://github.com/realkevinbrian">
                                 <i class='bx bxl-github' ></i>
                             </a>
                         </span>
 
                         <span>
-                            <a href="#">
+                            <a href="https://dev.to/realkevinbrian">
+                                <i class='bx bxl-dev-to'></i>
+                            </a>
+                        </span>
+
+                        <span>
+                            <a href="https://www.linkedin.com/in/realkevinbrian/">
                                 <i class='bx bxl-linkedin' >
                                 </i>
                             </a>
                         </span>
 
                         <span>
-                            <a href="#">
+                            <a href="https://www.instagram.com/realkevinbrian/">
                                 <i class='bx bxl-instagram' ></i>
                             </a>
                         </span>
 
                         <span>
-                            <a href="#">
+                            <a href="https://twitter.com/realKevinBrian">
                                 <i class='bx bxl-twitter' ></i>
                             </a>
                         </span>
@@ -109,20 +116,20 @@
                 </div>
             </div>
 
-            <div class="card__img">
+            <div class="card__img about_me">
                 <img src="./assets/images/profile (1).png" alt="">
             </div>
 
             <div class="card__desc">
                 <p>
-                    I'm a self taught web developer,I have just over 2 years of experience as a junior software engineer at First Technology. In my short time there, I've contributed to over a dozen projects and helped manage a project for one of the company's long-time clients.
+                    I'm a self taught web developer,I have just over 2 years of experience as a junior software engineer at First Technology.
                 </p>
             </div>
 
             <div class="card__button">
                 
                 <button>
-                    <a href="#">Download Resume<i class='bx bx-cloud-download'></i></a>
+                    <a href="#">More About me</i></a>
                 </button>
             </div>
         </contentCard>
@@ -160,7 +167,8 @@
             <Projectcard class="card" data-aos="slide-up">
 
                 <div class="card__img">
-                    <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image">
+                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
+                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
                 </div>
 
                 <div class="card__title">
@@ -190,7 +198,8 @@
             <Projectcard class="card" data-aos="slide-up">
 
                 <div class="card__img">
-                    <img src="https://i.ibb.co/pb5kTVJ/project5.png" alt="project Image">
+                    <!-- <img src="https://i.ibb.co/pb5kTVJ/project5.png" alt="project Image"> -->
+                    <img src="/assets/images/projects/image1.jpg" alt="project Image">
                 </div>
 
                 <div class="card__title">
@@ -216,6 +225,7 @@
                 </div>
 
             </Projectcard>
+            
         </projects>
 
         <span class="moreProjects" data-aos="slide-up"><a href="#">More Projects</a></span>
@@ -314,45 +324,57 @@
 </App>
 
 
-<footer class="footer">
+<footer class="footer" data-aos="fade-in">
 
     <div class="footer__link">
         <span>
-           <a href="#"><i class="bx bxl-instagram"></i></a>
+           <a href="contact.html">
+            <i class='bx bx-mail-send' ></i>
+        </a>
         </span>
 
         <span>
-            User
+            Contact
         </span>
     </div>
 
     <div class="footer__link">
         <span>
-            <a href="#"><i class="bx bx-user"></i></a>
+            <a href="about.html"><i class="bx bx-user"></i></a>
         </span>
 
         <span>
-            projects
+            About
         </span>
     </div>
 
     <div class="footer__link">
         <span>
-            <a href="#"><i class='bx bxl-medium-old' ></i></a>
+            <a href="index.html"><i class='bx bx-home-circle bx-flip-horizontal' style='color:#0588c5'  ></i></a>
+        </span>
+
+        <span>
+           Home
+        </span>
+    </div>
+
+    <div class="footer__link">
+        <span>
+            <a href="projects.html"><i class="bx bx-library"></i></a>
+        </span>
+
+        <span>
+            Projects
+        </span>
+    </div>
+
+    <div class="footer__link">
+        <span>
+            <a href="https://realkevinbrian.hashnode.dev/"><i class='bx bxl-medium-old' ></i></a>
         </span>
 
         <span>
             Blog
-        </span>
-    </div>
-
-    <div class="footer__link">
-        <span>
-            <a href=""><i class="bx bx-library"></i></a>
-        </span>
-
-        <span>
-            Services
         </span>
     </div>
 </footer>
@@ -367,8 +389,6 @@
       easing: 'ease-in-sine',
       delay: 100,
     });
-  </script>
-
-<body>  
+  </script> 
 </body>
 </html>
