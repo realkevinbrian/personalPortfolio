@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500");
+html,
+body {
+  font-size: 90%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*12px*/
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+h7 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: none;
+  color: #050D2A;
+}
+
+intro {
+  color: #050D2A;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+  border: 2px solid transparent;
+  border-bottom-color: #050D2A;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    border: 2px dashed white;
+    opacity: 0.9;
+  }
+  to {
+    border: 2px solid #b90743;
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    border: 2px dashed white;
+    opacity: 0.9;
+  }
+  to {
+    border: 2px solid #b90743;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes colorAnimate {
+  0% {
+    background-position: 0% 63%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  50% {
+    background-position: 100% 38%;
+    border-bottom-color: white;
+    border-right-color: white;
+  }
+  100% {
+    background-position: 0% 63%;
+  }
+}
+
+@keyframes colorAnimate {
+  0% {
+    background-position: 0% 63%;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  50% {
+    background-position: 100% 38%;
+    border-bottom-color: white;
+    border-right-color: white;
+  }
+  100% {
+    background-position: 0% 63%;
+  }
+}
+
+/*display Grid*/
+/*display Grid function*/
+/*display Flex function*/
+/*display Grid function*/
+/* 
+===============
+button component
+===============
+*/
+/* button endcomponent*/
+/* 
+==============
+card component
+==============
+*/
+/* 
+==============
+card end component
+==============
+*/
+/* 
+==============
+content card component
+==============
+*/
+/* 
+==============
+content card end component
+==============
+*/
+@media screen and (max-width: 920px) {
+  profile {
+    margin-top: 2vh;
+    height: 30vmax;
+    background-image: url("/assets/images/projects/image2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    background-origin: border-box;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  profile .descText {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    background-color: rgba(0, 0, 0, 0.692);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .custom-btn {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    grid-gap: 10px;
+  }
+}
+/*# sourceMappingURL=projects.css.map */
