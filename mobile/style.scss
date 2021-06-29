@@ -1,22 +1,42 @@
-@import "/styles/varibles";
-@import "/node_modules/easyscss-kevin/components/components";
-@import "/node_modules/easyscss-kevin/components/functions";
+@import "../styles/varibles";
+@import "../node_modules/easyscss-kevin/components/components";
+@import "../node_modules/easyscss-kevin/components/functions";
 
 
-@media screen and (max-width:920px){
+/* Portrait and Landscape */
+@media only screen 
+  and (max-width: 812px) {
 
 
+    #navbar{
+        display: none;
+    }
 
     // about me section
 
     .about_me{
 
-    img{
-        width: 70%!important;
-        padding: 50px;
-        z-index: 10;
-        border-radius: 20px!important;  
-    }
+
+        img{
+            width: 70%!important;
+            padding: 50px;
+            z-index: 1000;
+            border-radius: 20px!important;  
+        }
+    
+        
+        &::before{
+            position: absolute;
+            content: "";
+            width: 60%;
+            height: 50%;
+            // background-color: rgb(255, 255, 255);
+            transform: translateX(30px) translateY(20px);
+            // border-radius: 10px;
+            border: 5px solid rgb(255, 255, 255);
+    
+            
+        }
 
     
     &::before{
@@ -245,6 +265,8 @@
                     width: 100%;
                     margin: 0px;
                     max-width: 100%;
+
+                    
                 }
                 .card__title{
                     *{
@@ -424,6 +446,23 @@
             }   
         }
     }
+
+
+
+
+
+
+// removed Elements
+
+.callToAction{
+    display: none;
+}
+
+
+
+
+
+
 }
 
 

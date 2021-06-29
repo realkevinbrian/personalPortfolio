@@ -8,7 +8,10 @@
 
     <!-- styles link -->
     <link rel="stylesheet" href="/mobile/style.css">
+
+    <link rel="stylesheet" href="/desktop/style.css">
     
+
     <!-- cdn links -->
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -25,21 +28,51 @@
             <logo>
                 <h4>CoderX</h4>
             </logo>
+
+            <div class="nav" id="navbar">
+
+                <ul class="nav__links">
+
+                    <li class="nav__links--item">
+                        <a href="#" class="active">Home</a>
+                    </li>
+
+                    <li class="nav__links--item">
+                        <a href="#" class="active">About</a>
+                    </li>
+
+                    <li class="nav__links--item">
+                        <a href="#" class="active">Services</a>
+                    </li>
+
+                    <li class="nav__links--item">
+                        <a href="#" class="active">Projects</a>
+                    </li>
+
+                    <li class="nav__links--item">
+                        <a href="#" class="active">Blog</a>
+                    </li>
+
+                    <li class="nav__links--item contact-btn">
+                        <a href="#">Hire me</a>
+                    </li>
+
+                    
+                </ul>
+
+            </div>
         </nav><!----navbar end-->
 
         <profile>
 
             <profileImage>
             
-                    <img src="./assets/images/bgCoding.gif" alt="profile Image">
+                    <img src="./assets/images/bgCoding.gif" alt="profile Image" id="bg_image">
                 
             </profileImage>
 
             <profile_desc>
 
-                <name>
-                    <h7>Kevin Brian</h7>
-                </name>
                 <desc>
 
                     <socialmedia class="subheading1">
@@ -78,21 +111,39 @@
                         </span>
                         </div>
                     </socialmedia>
-                    <intro id="auto_write">
+                    <intro>
+                        <h4 id="auto_write"></h4>
+                        <p>
+                            Hello, I am Kevin, I'm Front end Developer, Nice to meet you
+                        </p>
+
                     </intro>
+
                 </desc>
 
+                <div class="callToAction">
+            
+                    <button>
+                        <a href="#">Hire me</a>
+                    </button>
+
+                    <button>
+                        <a href="#">Book a Call</a>
+                    </button>
+                </div>
+
             </profile_desc>
+            
         </profile>
     </section><!----header end-->
 
     <section class="body">
 
-        <contentCard class="card wow animate__animated animate__slideInLeft">
+        <contentCard class="card heroCard wow animate__animated animate__slideInUp">
 
             <div class="card__desc">
                 <p>
-                    Let's create something incredible
+                    Are you looking For a Frontend Developer?
                 </p>
             </div>
 
@@ -104,7 +155,7 @@
             </div>
         </contentCard>
 
-        <contentCard class="card card wow animate__animated animate__fadeIn" >
+        <contentCard class="card wow animate__animated animate__fadeIn" id="about_me">
 
             <div class="card__title">
                 <h4>About</h4>
@@ -133,7 +184,7 @@
             </div>
         </contentCard>
 
-        <contentCard class="card card wow animate__animated animate__fadeIn">
+        <contentCard class="card cardSkills wow animate__animated animate__fadeIn">
 
             <div class="card__title">
                 <h4>Skills</h4>
@@ -150,20 +201,13 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta beatae accusamus et nesciunt? Voluptatibus culpa perferendis iste modi id!
                 </p>
             </div>
-
-            <!-- <div class="card__button">
-                
-                <button>
-                    <a href="#">Call us</a>
-                </button>
-            </div> -->
         </contentCard>
 
         <h4 class="title">Recent Projects</h4>
 
         <projects>
 
-            <Projectcard class="card wow animate__animated animate__slideInRight">
+            <Projectcard class="card wow animate__animated animate__fadeIn">
 
                 <div class="card__img">
                     <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
@@ -194,40 +238,107 @@
 
             </Projectcard>
 
-            <Projectcard class="card card wow animate__animated animate__slideInLeft">
+            <Projectcard class="card wow animate__animated animate__fadeIn">
 
                 <div class="card__img">
-                    <!-- <img src="https://i.ibb.co/pb5kTVJ/project5.png" alt="project Image"> -->
-                    <img src="/assets/images/projects/image1.jpg" alt="project Image">
+                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
+                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
                 </div>
 
                 <div class="card__title">
-                    <h4>JK Electrotecnic Website</h4>
+                    <h4>Mozadvertisers Website</h4>
                 </div>
 
                 <div class="card__desc">
                     <p>
-                        JK electrotecnic website, with the purpose of showing the companies services and products and provide useful information using my creativity.
+                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
                     </p>
                 </div>
 
                 <div class="card__button">
 
                     <button>
-                        <a href="https://jkelectrotecnic.netlify.app">Visit Website</a>
+                        <a href="https://mozad.netlify.app">Visit Website</a>
                     </button>
 
                     <button>
-                        <a href="https://github.com/realkevinbrian/jkelectrotecnic">Github</a>
+                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
                     </button>
 
                 </div>
 
             </Projectcard>
+
+            <Projectcard class="card wow animate__animated animate__fadeIn">
+
+                <div class="card__img">
+                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
+                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
+                </div>
+
+                <div class="card__title">
+                    <h4>Mozadvertisers Website</h4>
+                </div>
+
+                <div class="card__desc">
+                    <p>
+                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
+                    </p>
+                </div>
+
+                <div class="card__button">
+
+                    <button>
+                        <a href="https://mozad.netlify.app">Visit Website</a>
+                    </button>
+
+                    <button>
+                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
+                    </button>
+
+                </div>
+
+            </Projectcard>
+
+
+            <Projectcard class="card wow animate__animated animate__fadeIn">
+
+                <div class="card__img">
+                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
+                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
+                </div>
+
+                <div class="card__title">
+                    <h4>Mozadvertisers Website</h4>
+                </div>
+
+                <div class="card__desc">
+                    <p>
+                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
+                    </p>
+                </div>
+
+                <div class="card__button">
+
+                    <button>
+                        <a href="https://mozad.netlify.app">Visit Website</a>
+                    </button>
+
+                    <button>
+                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
+                    </button>
+
+                </div>
+
+            </Projectcard>
+
+           
+
+            
             
         </projects>
 
-        <span class="moreProjects""><a href="projects.html">More Projects</a></span>
+        <span class="moreProjects"><a href="projects.html">More Projects</a></span>
         <hr id="separator" class="card wow animate__animated animate__slideInLeft">
 
         <contentCard class="card">
@@ -379,12 +490,10 @@
 </footer>
 
 <script src="./node_modules/wowjs/dist/wow.min.js"></script>
-
-
-
 <script>
 new WOW().init();
   </script>  
 <script src="assets/script/App.js"></script>
+
 </body>
 </html>
