@@ -7,16 +7,13 @@
     <title>Kevin Brian | About me</title>
 
     <!-- styles link -->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="/mobile/style.css">
+    <link rel="stylesheet" href="/mobile/projects.css">
     <!-- cdn links -->
-    <!-- <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css"/> -->
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
-    <script src="node_modules/aos/dist/aos.js"></script>
-</head>
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
+    
 <body>
 
     <App>
@@ -42,7 +39,7 @@
 
             <projects>
 
-                <Projectcard class="card" data-aos="slide-up">
+                <Projectcard class="card wow slideInLeft">
     
                     <div class="card__img">
                         <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image">
@@ -260,16 +257,25 @@
         </div>
     </footer>
     
-    <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="node_modules/wowjs/dist/wow.min.js"></script>
     <!-- <script src="./assets/script/App.js"> -->
     </script>
     <script>
-        AOS.init({
-          offset: 200,
-          duration: 600,
-          easing: 'ease-in-sine',
-          delay: 100,
-        });
-      </script> 
+    var wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+  </script> 
     </body>
     </html>

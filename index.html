@@ -7,13 +7,13 @@
     <title>Kevin Brian | Personal Portfolio</title>
 
     <!-- styles link -->
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/mobile/style.css">
+    
     <!-- cdn links -->
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+    <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
     
 </head>
 <body>
@@ -88,7 +88,7 @@
 
     <section class="body">
 
-        <contentCard class="card" data-aos="zoom-in">
+        <contentCard class="card wow animate__animated animate__slideInLeft">
 
             <div class="card__desc">
                 <p>
@@ -104,7 +104,7 @@
             </div>
         </contentCard>
 
-        <contentCard class="card" data-aos="zoom-in">
+        <contentCard class="card card wow animate__animated animate__fadeIn" >
 
             <div class="card__title">
                 <h4>About</h4>
@@ -133,7 +133,7 @@
             </div>
         </contentCard>
 
-        <contentCard class="card" data-aos="zoom-in">
+        <contentCard class="card card wow animate__animated animate__fadeIn">
 
             <div class="card__title">
                 <h4>Skills</h4>
@@ -163,7 +163,7 @@
 
         <projects>
 
-            <Projectcard class="card" data-aos="slide-up">
+            <Projectcard class="card wow animate__animated animate__slideInRight">
 
                 <div class="card__img">
                     <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
@@ -194,7 +194,7 @@
 
             </Projectcard>
 
-            <Projectcard class="card" data-aos="slide-up">
+            <Projectcard class="card card wow animate__animated animate__slideInLeft">
 
                 <div class="card__img">
                     <!-- <img src="https://i.ibb.co/pb5kTVJ/project5.png" alt="project Image"> -->
@@ -227,8 +227,8 @@
             
         </projects>
 
-        <span class="moreProjects" data-aos="slide-up"><a href="#">More Projects</a></span>
-        <hr id="separator">
+        <span class="moreProjects""><a href="projects.html">More Projects</a></span>
+        <hr id="separator" class="card wow animate__animated animate__slideInLeft">
 
         <contentCard class="card">
 
@@ -247,9 +247,9 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, assumenda!
                 </p>
 
-                <div class="testimonyWrapper" data-aos="fade">
-                    
-                    <div class="testimony" data-aos="zoom-in">
+                <div class="testimonyWrapper">
+                                 
+                    <div class="testimony">
 
                         <div class="testimony__img">
                             <span>Kevin Brian</span>
@@ -264,9 +264,9 @@
 
                     </div>
 
-                    <hr id="testimonySeparator" data-aos="top-bottom">
+                    <hr id="testimonySeparator">
 
-                    <div class="testimony" data-aos="zoom-in">
+                    <div class="testimony">
 
                         <div class="testimony__img">
                             <span>Kevin Brian</span>
@@ -293,7 +293,7 @@
             </div> -->
         </contentCard>
 
-        <contentCard class="card">
+        <contentCard class="card wow animate__animated animate__fadeIn">
 
             <div class="card__title">
                 <h4></h4>
@@ -323,7 +323,7 @@
 </App>
 
 
-<footer class="footer" data-aos="fade-in">
+<footer class="footer wow animate__animated animate__slideInUp">
 
     <div class="footer__link">
         <span>
@@ -378,15 +378,13 @@
     </div>
 </footer>
 
- 
-<script src="assets/script/App.js"></script>
+<script src="./node_modules/wowjs/dist/wow.min.js"></script>
+
+
+
 <script>
-    AOS.init({
-      offset: 200,
-      duration: 600,
-      easing: 'ease-in-sine',
-      delay: 120
-    });
-  </script> 
+new WOW().init();
+  </script>  
+<script src="assets/script/App.js"></script>
 </body>
 </html>
