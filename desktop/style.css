@@ -447,9 +447,11 @@ intro {
   }
   section.body .heroCard p {
     text-align: left;
-    margin-left: 90px;
     font-weight: bold;
-    font-size: 2.4vmax;
+    font-size: 2.2vmax;
+    padding: 0px;
+    margin: 1.1vmax;
+    margin-left: 90px;
   }
   section.body .card {
     display: -ms-grid;
@@ -476,7 +478,7 @@ intro {
             justify-content: center;
   }
   section.body .card__button button {
-    width: 40%;
+    width: 30%;
     height: 4vmax;
     border: 1px solid transparent;
     background-color: #050D2A;

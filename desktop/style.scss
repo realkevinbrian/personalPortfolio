@@ -324,15 +324,15 @@
         hero Card====start
         */
         .heroCard{
-            // margin: 30px;
             padding: 10px;
-            // background-color: rgb(228, 243, 242);
             background: -webkit-linear-gradient(64deg, #FE4AA4 0, #AAA7F6 81%);;
             p{
                 text-align: left;
-                margin-left: 90px;
                 font-weight: bold;
-                font-size: 2.4vmax;
+                font-size: 2.2vmax;
+                padding: 0px;
+                margin: 1.1vmax;
+                margin-left: 90px;
             }
         }
         .card {
@@ -360,7 +360,7 @@
 
                 button{
 
-                    width: 40%;
+                    width: 30%;
                     height: 4vmax;
                     border: 1px solid transparent;
                     background-color: $color-primary-4;
