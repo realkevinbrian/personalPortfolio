@@ -116,6 +116,7 @@ intro {
     margin: 0px;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
+    height: 100%;
   }
   button {
     -webkit-transition: background-color 0.5s;
@@ -266,7 +267,7 @@ intro {
     -ms-grid-columns: 40% auto;
         grid-template-columns: 40% auto;
         grid-template-areas: "l r";
-    height: 600px;
+    height: 45vmax;
     background-color: white;
   }
   .head profile profileImage {

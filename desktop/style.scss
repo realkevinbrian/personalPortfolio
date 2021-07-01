@@ -22,6 +22,7 @@
           padding: 0px;
           margin: 0px;
           box-sizing: content-box;
+          height: 100%;
           
       }
 
@@ -195,7 +196,7 @@
             display: grid;
             grid-template-columns: 40% auto;
             grid-template-areas: "l r";
-            height:600px;
+            height:45vmax;
             background-color: rgb(255, 255, 255);
             
 
