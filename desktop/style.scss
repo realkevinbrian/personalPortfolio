@@ -58,6 +58,7 @@
     // navigation
    
     .head{
+        
 
         nav{
             display: flex;
@@ -198,9 +199,6 @@
             grid-template-areas: "l r";
             height:45vmax;
             background-color: rgb(255, 255, 255);
-            
-
-
             profileImage{
                 grid-area: r;
                 display: flex;
@@ -219,10 +217,6 @@
                 // border: 2px dashed green;
                 display: grid;
                 grid-template-columns: 1fr;
-                
-                
-
-
                 desc{
                     // border: 2px dashed tomato;
                     flex: 1 1 70%;
