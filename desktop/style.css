@@ -103,11 +103,13 @@ intro {
   }
 }
 
-/*display Grid*/
-/*display Grid function*/
-/*display Flex function*/
-/*display Grid function*/
-@media only screen and (min-width: 813px) {
+@media only screen and (min-width: 769px) {
+  .footer {
+    display: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   html,
   body {
     padding: 0px;
@@ -153,8 +155,8 @@ intro {
   }
   .head nav logo {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 1vmax;
-            flex: 1 1 1vmax;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -173,20 +175,25 @@ intro {
     font-size: 1.5rem;
     padding: 0px;
     margin: 0px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
   }
   .head nav .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 0px;
     margin: 0px;
+    max-width: 100%;
+    width: 100%;
   }
   .head nav .nav__links {
     font-size: 1.2rem;
@@ -196,6 +203,8 @@ intro {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
     list-style: none;
     justify-items: center;
     -webkit-box-align: center;
@@ -203,7 +212,7 @@ intro {
             align-items: center;
   }
   .head nav .nav__links--item {
-    margin: 30px;
+    margin: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
     display: -webkit-box;
@@ -257,7 +266,7 @@ intro {
     -ms-grid-columns: 40% auto;
         grid-template-columns: 40% auto;
         grid-template-areas: "l r";
-    height: 550px;
+    height: 600px;
     background-color: white;
   }
   .head profile profileImage {
@@ -314,6 +323,8 @@ intro {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 20%;
             flex: 1 1 20%;
+    -ms-flex-flow: row;
+        flex-flow: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -323,7 +334,7 @@ intro {
   }
   .head profile profile_desc desc socialmedia a {
     text-decoration: none;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     color: #050D2A;
   }
   .head profile profile_desc desc intro {
@@ -354,7 +365,7 @@ intro {
   }
   .head profile profile_desc desc intro p {
     color: #050D2A;
-    font-size: 2.6vmax !important;
+    font-size: 1.6rem !important;
     padding: 0px;
     margin: 0px;
     margin-left: 20px;
@@ -368,8 +379,6 @@ intro {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 3vmax;
-        grid-template-rows: 3vmax;
     justify-items: center;
     -ms-flex-line-pack: center;
         align-content: center;
@@ -378,6 +387,7 @@ intro {
     width: 15vmax;
     background-color: #050D2A;
     border-radius: 2px;
+    padding: 10px;
   }
   .head profile profile_desc .callToAction button:hover {
     background-color: #04448d;
@@ -385,8 +395,8 @@ intro {
   .head profile profile_desc .callToAction button a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 500;
   }
   .head profile profile_desc * {
     border: 2px dashed transparent;
@@ -418,9 +428,20 @@ intro {
     /* 
            projects=====end
         */
+    /* 
+           Methodology=====Start
+        */
+    /* 
+           Methodology=====End
+        */
+    /*
+        ==================testimonies===============
+        */
+    /*
+        ==================testimonies========end
+        */
   }
   section.body .heroCard {
-    margin: 30px;
     padding: 10px;
     background: -webkit-linear-gradient(64deg, #FE4AA4 0, #AAA7F6 81%);
   }
@@ -459,7 +480,11 @@ intro {
     height: 4vmax;
     border: 1px solid transparent;
     background-color: #050D2A;
-    font-size: 1.4rem;
+    font-size: 2.6vmin;
+  }
+  section.body .card__button button:hover {
+    background-color: #04448d;
+    border-radius: 4px;
   }
   section.body .card__button button a {
     text-decoration: none;
@@ -467,8 +492,6 @@ intro {
   }
   section.body #about_me {
     border: 1px solid transparent;
-    border-bottom-color: #050D2A;
-    background-color: #fffcfc;
     height: 40vmax;
     display: -ms-grid;
     display: grid;
@@ -523,18 +546,18 @@ intro {
   }
   section.body #about_me .card__title .balls div {
     margin: 5px;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
   }
   section.body #about_me .card__title .balls div:nth-child(1) {
-    background-color: #800031;
+    background-color: #003c80;
   }
   section.body #about_me .card__title .balls div:nth-child(2) {
-    background-color: #004680;
+    background-color: #00805a;
   }
   section.body #about_me .card__title .balls div:nth-child(3) {
-    background-color: #01dd43;
+    background-color: #dd7601;
   }
   section.body #about_me .card__img {
     -ms-grid-row: 2;
@@ -556,8 +579,8 @@ intro {
     margin: 0px;
   }
   section.body #about_me .card__img img {
-    width: 60%;
-    max-width: 65%;
+    width: 70%;
+    max-width: 70%;
   }
   section.body #about_me .card__desc {
     -ms-grid-row: 2;
@@ -574,14 +597,14 @@ intro {
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
     padding: 0px;
     margin: 0px;
     background-color: #f5f4f4;
   }
   section.body #about_me .card__desc p {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     padding: 40px;
     margin: 0px;
     padding-bottom: 0px;
@@ -589,17 +612,186 @@ intro {
   }
   section.body #about_me .card__button {
     background-color: #f5f4f4;
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-area: b;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  section.body #about_me .card__button button {
+    -webkit-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+  }
+  section.body #about_me .card__button button:hover {
+    background: #04a2eb;
+  }
+  section.body .cardSkills {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    background-color: #f8f8f8;
+  }
+  section.body .cardSkills .card__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px;
     margin: 0px;
   }
-  section.body #about_me .card__button button:hover {
-    background: -webkit-linear-gradient(64deg, #085e86 0, #1e98df 81%);
+  section.body .cardSkills .card__title h4 {
+    color: #050D2A;
+    padding: 0px;
+    margin: 1.2vmax;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 2vmax;
   }
-  section.body .cardSkills {
-    display: none;
+  section.body .cardSkills .card__desc {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  section.body .cardSkills .card__desc p {
+    width: 60%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 1.2rem;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -ms-grid-rows: 300px;
+        grid-template-rows: 300px;
+    grid-gap: 30px;
+    margin: 15vmax;
+    margin-top: 3vmax;
+    margin-bottom: 5vmax;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill {
+    background-color: #f8fbfd;
+    padding: 1.5vmax;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    -webkit-box-shadow: -1px 2px 7px rgba(0, 0, 0, 0.4);
+            box-shadow: -1px 2px 7px rgba(0, 0, 0, 0.4);
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__icon {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__icon strong {
+    font-size: 1.1rem;
+    padding: 10px;
+    color: #0c0c0c;
+    margin: 0px;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__icon span {
+    background-color: #00a2ff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__icon span i {
+    font-size: 2rem;
+    color: white;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__show {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 65%;
+            flex: 0 1 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__show span {
+    margin: 5px;
+    font-weight: bold;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__show span span {
+    font-size: 0.8rem;
+  }
+  section.body .cardSkills .card__desc .skill_wrapper .skill__show span i {
+    font-size: 1.7rem;
+    font-weight: 100 !important;
   }
   section.body .title {
     color: #050D2A;
@@ -609,19 +801,19 @@ intro {
   section.body projects {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     padding: 5vmax;
   }
   section.body projects Projectcard {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
     border: 1px solid #dad6d6;
     border-radius: 2px;
-    background-color: #f1f1f1;
+    background-color: white;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
   }
   section.body projects Projectcard .card__img img {
     width: 100%;
@@ -648,7 +840,7 @@ intro {
     margin: 5px;
   }
   section.body projects Projectcard .card__desc p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 10px;
   }
   section.body projects Projectcard .card__button {
@@ -667,6 +859,7 @@ intro {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     height: 3vmax;
+    background-color: #0066ff;
   }
   section.body projects Projectcard .card__button button a {
     font-size: 1rem;
@@ -691,10 +884,123 @@ intro {
     padding: 15px;
     text-decoration: none;
     color: white;
-    background-color: #050D2A;
+    background-color: #0066ff;
   }
   section.body .moreProjects a:hover {
     background-color: #036aa5;
+  }
+  section.body .methodology {
+    background-color: goldenrod;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 't t' 'b b';
+    padding: 40px;
+  }
+  section.body .methodology__header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: t;
+    grid-column: 3/-3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.body .methodology__header h4 {
+    font-size: 3rem;
+  }
+  section.body .methodology .methodology__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: b;
+    grid-column: 2/-2;
+    grid-gap: 30px;
+  }
+  section.body .methodology .methodology__item {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: center;
+    align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: center;
+    padding: 3vmax;
+    border-radius: 10px;
+  }
+  section.body .methodology .methodology__item--icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.body .methodology .methodology__item--icon img {
+    width: 100%;
+    max-width: 100%;
+  }
+  section.body .methodology .methodology__item--title h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0px !important;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 10px;
+  }
+  section.body .methodology .methodology__item--title h4 span:nth-child(1) {
+    color: #008cff;
+    font-size: 1.6rem;
+  }
+  section.body .methodology .methodology__item--title h4 span:nth-child(2) {
+    color: #181818;
+    font-size: 0.9rem;
+  }
+  section.body .methodology .methodology__item--desc p {
+    color: #b8b8b8;
+    margin-top: 0px;
+  }
+  section.body .testimonies {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

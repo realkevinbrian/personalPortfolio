@@ -52,8 +52,8 @@
                 </div>
     
                 <div class="card__desc">
-                    <p>
-                        I'm a self taught web developer,I have just over 2 years of experience as a junior software engineer at First Technology.
+                    <p id="about_me_text">
+                        
                     </p>
                 </div>
     
@@ -270,6 +270,14 @@
     
     <script src="/node_modules/wowjs/dist/wow.min.js"></script>
     </script>
+
+    <script>
+        let id = document.getElementById("about_me_text");
+        let text = "“I am a competent and positive Web Developer who, over the years, has built a diverse range of skills, qualities and attributes that ensure high performance in this role. I have extensive experience working alone and as part of a team on challenging and often urgent web development projects that acquire excellent creative and technical resources and an ability to ensure that all work is optimized across a wide range of platforms. I take my job as a web developer seriously and that means I always make sure my skills are kept up to date in this rapidly changing industry. If you hire me as your Web Developer, I guarantee that I will fit into your team quickly, I will always put the business needs of your business first in everything I do, and the work I do will be consistent to a first-class standard. ”";
+
+        id.innerText = text;
+    </script>
+    
     <script>
     var wow = new WOW(
   {

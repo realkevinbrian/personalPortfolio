@@ -1,7 +1,7 @@
 let auto = document.getElementById("auto_write");
 
 
-let str = "Hello My name is kevin";
+let str = "Hello, I am Kevin, I'm Front end Developer, Nice to meet you";
 
 let spd = 100;
 let i = 0;
@@ -21,18 +21,9 @@ type();
     // Create a media condition that targets viewports at least 768px wide
 
 const desktop = window.matchMedia('(max-width:812px)');
-
-var navbar = document.getElementById("navbar");
-
-if(desktop.matches){
-  navbar.style.display = "none";
-
-}
-
 const mediaQuery = window.matchMedia('(min-width:823px)')
 // Check if the media query is true
 var bgImage = document.getElementById("bg_image");
-var projectCard = document.getElementsByTagName("Projectcard");
 
 if (mediaQuery.matches) {
   // Then trigger an alert
@@ -44,20 +35,7 @@ if (mediaQuery.matches) {
     console.log(elem)
   });
 
-
-
 }
-else{
-  
-  bgImage.src = "./assets/images/bgCoding.gif";
-  console.log("Now on mobile device");
-  Array.from(projectCard).forEach(elem=>{
-    elem.classList.add("card");
-    console.log(elem)
-  });
-
-}
-
 
 //hover effect
 //collect all classes
