@@ -1,0 +1,40 @@
+html,
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+@keyframes showBorder {
+
+    0%{
+        border-radius: 0px;
+        border: 2px solid transparent;
+
+    }
+
+    20%{
+        border-radius: 4px;
+        border-right-color: rgb(0, 118, 173);
+    }
+
+    40%{
+        border-radius: 8px;
+        border-bottom-color: rgb(8, 111, 158);
+    }
+
+    80%{
+        border-radius: 10px;
+        border-top-color: rgb(11, 103, 189);
+
+    }
+
+    100%{
+        border-radius: 12px;
+        border: 2px solid rgb(11, 103, 189);
+        // border-left-color: rgb(11, 103, 189);
+    }
+
+    
+    
+}

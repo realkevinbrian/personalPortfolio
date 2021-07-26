@@ -1,0 +1,14 @@
+//functions
+@mixin displayFlex($direction){
+    display: flex;
+    flex-direction:$direction;
+}
+
+@mixin displayGrid{
+    display: grid;
+}
+
+@mixin debug ($color) {
+    border: 2px dashed $color;
+    
+}

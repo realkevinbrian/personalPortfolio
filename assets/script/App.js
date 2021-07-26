@@ -1,20 +1,47 @@
-let auto = document.getElementById("auto_write");
+//navigation function
+
+// navbarlinks();
+
+function navbarlinks() {
+  let anchorTag = document.querySelector(".navbar__menu");
+  anchorTag.addEventListener("mouseover", elem => {
+
+    let targetEl = elem.target;
+    let anchor = document.createElement("a");
+
+    console.log(targetEl);
+
+    if (targetEl.matches("a")) {
+
+      //
+      console.log(targetEl.classList);
+      targetEl.classList.add("active");
 
 
-let str = "Hello, I am Kevin, I'm Front end Developer, Nice to meet you";
+    } else {
+      console.log("not true");
+    }
 
-let spd = 100;
-let i = 0;
-let type = () =>{
-  
-  if(i < str.length){
-    auto.innerHTML += str.charAt(i);
-    i++
-    setTimeout(type, spd);
-  }
+
+  });
 }
 
-type();
 
 
+//overlay
+let overlay = document.querySelectorAll(".overlay");
 
+// console.log(overlay)
+
+for(let elem of overlay){
+
+  elem.addEventListener ("mouseover", show=>{
+
+    show.target.style.opacity = "4";
+  })
+
+  elem.addEventListener("mouseleave", hide=>{
+    hide.target.style.opacity = "0";
+
+  })
+}

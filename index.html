@@ -5,767 +5,486 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Kevin Brian | Personal Portfolio</title>
-
-    <!-- styles link -->
-    <link rel="stylesheet" href="/desktop/style.css">
-    <link rel="stylesheet" href="/mobile/style.css">
-
-    
     
 
-    <!-- cdn links -->
-   
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.css">
-    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
-    
+    <!-- link -->
+    <link rel="stylesheet" href="/assets/style/style.css">
+
+    <!----links-->
+    <link rel="stylesheet" href="/node_modules/boxicons/css/boxicons.min.css">
 </head>
 <body>
+    <!------nav bar-->
+    <nav class="navbar">
+        <!-- navigation logo -->
+        <div class="navbar__logo">
+            <h3>&Delta;</h3>
+        </div>
 
-<App>
-
-    <section class="head"><!----header-->
-        <nav><!----nav bar-->
-            <logo>
-                <h4>CoderX</h4>
-            </logo>
-
-            <div class="nav" id="navbar">
-
-                <ul class="nav__links">
-
-                    <li class="nav__links--item">
-                        <a href="#" class="active">Home</a>
-                    </li>
-
-                    <li class="nav__links--item">
-                        <a href="#" class="active">About</a>
-                    </li>
-
-                    <li class="nav__links--item">
-                        <a href="#" class="active">Services</a>
-                    </li>
-
-                    <li class="nav__links--item">
-                        <a href="#" class="active">Projects</a>
-                    </li>
-
-                    <li class="nav__links--item">
-                        <a href="#" class="active">Blog</a>
-                    </li>
-
-                    <li class="nav__links--item contact-btn">
-                        <a href="#">Hire me</a>
-                    </li>
-
-                    
-                </ul>
-
-            </div>
-        </nav><!----navbar end-->
-
-        <profile>
-
-            <profileImage>
-            
-                    <img src="./assets/images/programming.gif" alt="profile Image" id="bg_image">
-                
-            </profileImage>
-
-            <profile_desc>
-
-                <desc>
-
-                    <socialmedia class="subheading1">
-                        
-                        <div>
-
-                        <span>
-                            <a href="https://github.com/realkevinbrian">
-                                <i class='bx bxl-github' ></i>
-                            </a>
-                        </span>
-
-                        <span>
-                            <a href="https://dev.to/realkevinbrian">
-                                <i class='bx bxl-dev-to'></i>
-                            </a>
-                        </span>
-
-                        <span>
-                            <a href="https://www.linkedin.com/in/realkevinbrian/">
-                                <i class='bx bxl-linkedin' >
-                                </i>
-                            </a>
-                        </span>
-
-                        <span>
-                            <a href="https://www.instagram.com/realkevinbrian/">
-                                <i class='bx bxl-instagram' ></i>
-                            </a>
-                        </span>
-
-                        <span>
-                            <a href="https://twitter.com/realKevinBrian">
-                                <i class='bx bxl-twitter' ></i>
-                            </a>
-                        </span>
-                        </div>
-                    </socialmedia>
-                    <intro>
-                        <p id="auto_write">
-                            
-                        </p>
-
-                    </intro>
-
-                </desc>
-
-                <div class="callToAction">
-            
-                    <button>
-                        <a href="#">Hire me</a>
-                    </button>
-
-                    <button>
-                        <a href="#">Book a Call</a>
-                    </button>
-                </div>
-
-            </profile_desc>
-            
-        </profile>
-    </section><!----header end-->
-
-    <section class="body">
-
-        <contentCard class="card heroCard wow animate__animated animate__slideInUp">
-
-            <div class="card__desc">
-                <p>
-                    Are you looking For a Frontend Developer?
-                </p>
-            </div>
-
-            <div class="card__button">
-                
-                <button>
-                    <a href="#">Get in Touch</a>
-                </button>
-            </div>
-        </contentCard>
-
-        <contentCard class="card wow animate__animated animate__fadeIn" id="about_me">
-
-            <div class="card__title">
-                <h4>About</h4>
-                <div class="balls">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-
-            <div class="card__img about_me">
-                <img src="./assets/images/profile (1).png" alt="">
-            </div>
-
-            <div class="card__desc">
-                <p>
-                    I am a competent and positive Web Developer who, over the years, has built a diverse range of skills, qualities and attributes that ensure high performance in this role.
-                </p>
-            </div>
-
-            <div class="card__button">
-                
-                <button>
-                    <a href="#">More About me</i></a>
-                </button>
-            </div>
-        </contentCard>
-
-        <contentCard class="card cardSkills wow animate__animated animate__fadeIn">
-
-            <div class="card__title">
-                <h4>Professional Skills</h4>
-                <div class="balls">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-            </div>
-
-            <div class="card__desc">
-
-                <p>
-                    During my carrer,I always ensure that my skills are kept up to date in this rapidly changing industry.
-                    
-                </p>
-
-                <div class="skill_wrapper">
-
-                    <div class="skill">
-
-                        <div class="skill__icon">
-                            <span>
-                                <i class='bx bx-laptop'></i>
-                            </span>
-                            <strong>
-                                FrontEnd
-                            </strong>
-                        </div>
-
-                        <div class="skill__show">
-
-                            <span>
-                                <i class='bx bxl-html5' style='color:#136f8d'  ></i>
-                                <span>HTML5</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-sass' style='color:#136f8d' ></i>
-                                <span>Sass</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-bootstrap' style='color:#136f8d' ></i>
-                                <span>BootStrap</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-javascript' style='color:#136f8d'></i>
-                                <span>Javascript</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-jquery' style='color:#e6b500'  ></i>
-                                <span>Jquery</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-react' style='color:#009aff'  ></i>
-                                <span>React</span>
-                            </span>
-                        </div>
+        <!-- navigation logo menu-->
+        <ul class="navbar__menu">
+            <li><a href="#home" >Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li class="btn btn-link"><a href="#">Contact</a></li>
+        </ul>
+    </nav><!------nav bar end-->
     
-                    </div>
-
-                    <div class="skill">
-
-                        <div class="skill__icon">
-                            <span>
-                                <i class='bx bxs-pen'></i>
-                            </span>
-                            <strong>
-                                UI/UX Design
-                            </strong>
-                        </div>
-
-                        <div class="skill__show">
-
-                            <span>
-                                <i class='bx bxl-figma' style='color:#1097c3'  ></i>
-                                <span>Figma</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-adobe' style='color:#1097c3' ></i>
-                                <span>Adobe XD</span>
-                            </span>
-
-
-                            <span>
-                                <i class='bx bxl-sass' style='color:#136f8d' ></i>
-                                <span>Illustrator</span>
-                            </span>
-
-
-                            <span>
-                                <i class='bx bxl-bootstrap' style='color:#136f8d' ></i>
-                                <span>PhotoShop</span>
-                            </span>
-                        </div>
-    
-                    </div>
-
-                    <div class="skill">
-
-                        <div class="skill__icon">
-                            <span>
-                                <i class='bx bxs-server'></i>
-                            </span>
-                            <strong>
-                                Backend 
-                            </strong>
-                        </div>
-
-                        <div class="skill__show">
-
-                            <span>
-                                <i class='bx bxl-python'></i>
-                                <span>PHP</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-nodejs' ></i>
-                                <span>Node JS</span>
-                            </span>
-
-                            <span>
-                                <i class='bx bxl-react' style='color:#009aff'  ></i>
-                                <span>Rest API</span>
-                            </span>
-                            
-                        </div>
-    
-                    </div>
-
-                
-
-
-                </div>
-
-
-            </div>
-        </contentCard>
-
-        <h4 class="title">Recent Projects</h4>
-
-        <projects>
-
-            <Projectcard class="card wow animate__animated animate__fadeIn">
-
-                <div class="card__img">
-                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
-                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
-                </div>
-
-                <div class="card__title">
-                    <h4>Mozadvertisers Website</h4>
-                </div>
-
-                <div class="card__desc">
-                    <p>
-                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
-                    </p>
-                </div>
-
-                <div class="card__button">
-
-                    <button>
-                        <a href="https://mozad.netlify.app">Visit Website</a>
-                    </button>
-
-                    <button>
-                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
-                    </button>
-
-                </div>
-
-            </Projectcard>
-
-            <Projectcard class="card wow animate__animated animate__fadeIn">
-
-                <div class="card__img">
-                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
-                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
-                </div>
-
-                <div class="card__title">
-                    <h4>Mozadvertisers Website</h4>
-                </div>
-
-                <div class="card__desc">
-                    <p>
-                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
-                    </p>
-                </div>
-
-                <div class="card__button">
-
-                    <button>
-                        <a href="https://mozad.netlify.app">Visit Website</a>
-                    </button>
-
-                    <button>
-                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
-                    </button>
-
-                </div>
-
-            </Projectcard>
-
-            <Projectcard class="card wow animate__animated animate__fadeIn">
-
-                <div class="card__img">
-                    <!-- <img src="https://i.ibb.co/ryVtzvt/project2.png" alt="project Image"> -->
-                    <img src="/assets/images/projects/image2.jpg" alt="project Image">
-                </div>
-
-                <div class="card__title">
-                    <h4>Mozadvertisers Website</h4>
-                </div>
-
-                <div class="card__desc">
-                    <p>
-                        Mozadvertisers website, I developed this website for a Digital marketing agency, to showcase their services, and provide information about their agency
-                    </p>
-                </div>
-
-                <div class="card__button">
-
-                    <button>
-                        <a href="https://mozad.netlify.app">Visit Website</a>
-                    </button>
-
-                    <button>
-                        <a href="https://github.com/realkevinbrian/Mozadvertisers">Github</a>
-                    </button>
-
-                </div>
-
-            </Projectcard>
-
-           
-
+    <!-- banner page -->
+    <div class="banner" id="home">
+        <div class="banner__content">
             
-            
-        </projects>
-
-        <span class="moreProjects"><a href="projects.html">More Projects</a></span>
-        <hr id="separator" class="card wow animate__animated animate__slideInLeft">
-
-        <contentCard class="methodology">
-
-            <div class="methodology__header">
-                <h4>My methodology</h4>
-            </div>
-
-            <div class="methodology__container">
-                
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02d5d4e7676bb3918115_Explorer.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            01
-                        </span>
-
-                        <span>
-                            To explore
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            I put myself in your users' shoes in order to understand their needs.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02d5d4e7672667918114_Cadrer.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            02
-                        </span>
-
-                        <span>
-                            Frame
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            We define together the framework of the experience and will begin to formalize the user journey.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02d5fd176e9dea27dfa6_Imaginer.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            03
-                        </span>
-
-                        <span>
-                            Imagine
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            I generate several ideas to solve our problems.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02d50dc04b010b939b45_Designer.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            04
-                        </span>
-
-                        <span>
-                            Designate
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            I will design and create an interactive prototype.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02e10dc04b5372939b4b_Tester.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            05
-                        </span>
-
-                        <span>
-                            Test
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            I analyze the prototype with real users in order to optimize and validate the solution.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="methodology__item">
-
-                    <div class="methodology__item--icon">
-                        <span>
-                            <img src="https://uploads-ssl.webflow.com/5c584b827bd3ab4c7e1a52c2/5c5a02d5d4e7672cf8918113_Deployer.svg" alt="">
-                        </span>
-                    </div>
-
-                    <div class="methodology__item--title">
-                        <h4>
-                        <span>
-                            06
-                        </span>
-
-                        <span>
-                            Deploy
-                        </span>
-                    </h4>
-                    </div>
-
-                    <div class="methodology__item--desc">
-                        <p>
-                            Once the prototype has been validated. We will be able to develop, launch and promote the product.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-    
-        </contentCard>
-
-        <contentCard class="card testimonies">
-
-            <div class="card__title">
-                <h4>Testemonies</h4>
-                <div class="balls">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-
-            </div>
-
-            <div class="card__desc">
-                <p> 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, assumenda!
-                </p>
-
-                <div class="testimonyWrapper">
-                                 
-                    <div class="testimony">
-
-                        <div class="testimony__img">
-                            <span>Kevin Brian
-                                <small>Mozad CEO</small>
-                            </span>
-                            <img src="./assets/images/profile (2).png" alt="Testimony Image">
-                        </div>
-
-                        <div class="testimony__text">
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, at cumque eaque ut error modi perspiciatis illum aspernatur quos beatae!
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <hr id="testimonySeparator">
-
-                    <div class="testimony">
-
-                        <div class="testimony__img">
-                            <span>Kevin Brian
-                                <small>Mozad CEO</small>
-                            </span>
-                            <img src="./assets/images/image.jpg" alt="Testimony Image">
-                        </div>
-
-                        <div class="testimony__text">
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, at cumque eaque ut error modi perspiciatis illum aspernatur quos beatae!
-                            </p>
-                        </div>
-
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            <!-- <div class="card__button">
-                
-                <button>
-                    <a href="#">Call us</a>
-                </button>
-            </div> -->
-        </contentCard>
-
-        <contentCard class="card heroCard wow animate__animated animate__slideInUp">
-
-            <div class="card__desc">
+            <!-- content-->
+            <div class="text">
                 <p>
-                    Are you looking For a Frontend Developer?
+                    Hey, I'm Kevin Brian<br>
+                    A frontend developer<br>
+                    nice to meet you!
                 </p>
             </div>
+            <!-- buttons-->
+            <div class="buttons">
 
-            <div class="card__button">
-                
-                <button>
-                    <a href="#">Get in Touch</a>
-                </button>
+                <button class="btn"><a href="#">Hire me</a></button>
+
+                <button class="btn"><a href="#">Portfolio</a></button>
+
             </div>
-        </contentCard>
 
+            <!-- links -->
+            <div class="links">
+                <i class="bx bxl-twitter"></i>
+                <i class="bx bxl-facebook"></i>
+                <i class="bx bxl-instagram"></i>
+                <i class="bx bxl-github"></i>
+                <i class="bx bxl-linkedin"></i>
+            </div>
+
+        </div>
+
+        <!-- image -->
+        <div class="banner__image">
+            <img src="./assets/images/sample.gif" alt="Page">
+            <!-- <img src="./assets/images/profile (2).png" alt="Page"> -->
+        </div>
+
+    </div>
+    <!-- banner page -->
+    
+    <!---- about me-->
+    <div class="about" id="about">
+
+        <div class="header">
+            <h5>About</h5>
+            <div class="balls">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+            
+        <div class="about__image">
+            <img src="./assets/images/projects/img (2).gif" alt="Alt">
+        </div>
+
+        <div class="about__content">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil minus, sint quae vero magnam saepe! Blanditiis architecto aut doloremque natus.
+            </p>
+            <div class="buttons">
+                
+                <button class="btn">
+                    <a href="#">Resume</a>
+                </button>
+                
+                <button class="btn">
+                    <a href="#">Learn more </a>
+                </button>
+
+            </div>
+
+        </div>
         
-    </section>
-
-</App>
-
-
-<footer class="footer wow animate__animated animate__slideInUp">
-
-    <div class="footer__link">
-        <span>
-           <a href="contact.html">
-            <i class='bx bx-mail-send' ></i>
-        </a>
-        </span>
-
-        <span>
-            Contact
-        </span>
     </div>
+    <!---- about me-->
 
-    <div class="footer__link">
-        <span>
-            <a href="about.html"><i class="bx bx-user"></i></a>
-        </span>
+    <!---- about me 2-->
+    <div class="about about_banner">
+        
+        <div class="header">
+            <h5>About</h5>
+            <div class="balls">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+            
+        <div class="about__image">
+            <img src="./assets/images/projects/img (2).gif" alt="Alt">
+        </div>
 
-        <span>
-            About
-        </span>
+        <div class="about__content">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil minus, sint quae vero magnam saepe! Blanditiis architecto aut doloremque natus.
+            </p>
+            <div class="buttons">
+                
+                <button class="btn">
+                    <a href="#">Resume</a>
+                </button>
+                
+                <button class="btn">
+                    <a href="#">Learn more </a>
+                </button>
+
+            </div>
+
+        </div>
+        
     </div>
+    <!---- about me banner 2-->
 
-    <div class="footer__link">
-        <span>
-            <a href="index.html"><i class='bx bx-home-circle bx-flip-horizontal' style='color:#0588c5'  ></i></a>
-        </span>
+    <!-- skills-->
+    <div class="skills" id="skills">
 
-        <span>
-           Home
-        </span>
+        <div class="skills__title">
+            <h4>Skills</h4>
+            <p>Professional Skills</p>
+        </div>
+
+        <div class="skills__wrapper">
+
+            <div class="card">
+                
+                <div class="card__image">
+                    <i class="bx bxl-github"></i>
+                </div>
+
+                <div class="card__title">
+                    <h4>Front end</h4>
+                </div>
+
+                <div class="card__content">
+
+                    <span>
+                        <i class="bx bxl-html5"></i>
+                        <small>HTML5</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-css3"></i>
+                        <small>Css3</small>
+                    </span>
+
+                    <span>
+                            <i class="bx bxl-sass"></i>
+                            <small>Sass</small>
+                        </span>
+    
+                        <span>
+                                <i class="bx bxl-jquery"></i>
+                                <small>Jquery</small>
+                        </span>
+
+
+                    <span>
+                        <i class="bx bxl-bootstrap"></i>
+                        <small>Bootstrap</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-react"></i>
+                        <small>React JS</small>
+                    </span>
+
+
+
+
+                </div>
+                
+            </div>
+
+            <div class="card">
+                
+                <div class="card__image">
+                    <i class="bx bxl-twitter"></i>
+                </div>
+
+                <div class="card__title">
+                    <h4>UX/UI</h4>
+                </div>
+
+                <div class="card__content">
+
+                    <span>
+                    <i class="bx bxl-adobe"></i>
+                        <small>Adobe XD</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-figma"></i>
+                            <small>Figma</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-adobe"></i>
+                            <small>Photoshop</small>
+                        </span>
+    
+                        <span>
+                            <i class="bx bxl-adobe"></i>
+                                <small>Illustrator</small>
+                        </span>
+
+
+                    <span>
+                        <i class="bx bxl-adobe"></i>
+                            <small>Elementor</small>
+                    </span>
+
+                </div>
+                
+            </div>
+
+            <div class="card">
+                
+                <div class="card__image">
+                    <i class="bx bxl-twitter"></i>
+                </div>
+
+                <div class="card__title">
+                    <h4>Back end</h4>
+                </div>
+
+                <div class="card__content">
+
+                    <span>
+                    <i class="bx bxl-twitter"></i>
+                        <small>PHP</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-twitter"></i>
+                            <small>Laravel</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-twitter"></i>
+                            <small>Node JS</small>
+                        </span>
+    
+                        <span>
+                            <i class="bx bxl-twitter"></i>
+                                <small>Express JS</small>
+                        </span>
+
+                </div>
+                
+            </div>
+
+            <div class="card">
+                
+                <div class="card__image">
+                    <i class="bx bxl-twitter"></i>
+                </div>
+
+                <div class="card__title">
+                    <h4>Database</h4>
+                </div>
+
+                <div class="card__content">
+
+                    <span>
+                    <i class="bx bxl-instagram"></i>
+                        <small>My SQL</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-twitter"></i>
+                            <small>Mongo DB</small>
+                    </span>
+
+                    <span>
+                        <i class="bx bxl-twitter"></i>
+                            <small>RestAPI</small>
+                        </span>
+    
+                        <span>
+                            <i class="bx bxl-twitter"></i>
+                                <small>Postregre</small>
+                        </span>
+
+                </div>
+                
+            </div>
+
+        </div>
     </div>
+    <!-- Skills end -->
 
-    <div class="footer__link">
-        <span>
-            <a href="projects.html"><i class="bx bx-library"></i></a>
-        </span>
+    <!-- projects -->
+    <div class="projects" id="portfolio">
+        
+        <div class="projects__title">
+            <h4>works</h4>
+            <p>Recent projects</p>
+        </div>
+        
 
-        <span>
-            Projects
-        </span>
+        <div class="projects__wrapper">
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (1).gif" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (1).jpg" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (2).gif" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (3).gif" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (15).png" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="projects__wrapper--card">
+                <img src="/assets/images/projects/img (4).gif" alt="Project 1">
+                <div class="overlay">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, sint?
+                    </p>
+
+                    <div class="buttons">
+                        <button class="btn"><a href="#">Live Demo</a></button>
+                        <button class="btn"><a href="#">Github</a></button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+    <!-- projects end-->
 
-    <div class="footer__link">
-        <span>
-            <a href="https://realkevinbrian.hashnode.dev/"><i class='bx bxl-medium-old' ></i></a>
-        </span>
+    <!--------testimonies-->
+    <div class="testimonies">
 
-        <span>
-            Blog
-        </span>
+        <div class="testimonies__title">
+            <h4>Skills</h4>
+            <p>Professional Skills</p>
+        </div>
+
+        <div class="testimonies__wrapper">
+
+            <div class="testimony">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima veritatis esse molestias praesentium quod consequuntur ipsum impedit accusantium, sint quam?
+                </p>
+
+                <p>
+                    <span>Name</span>
+                    <img src="/assets/images/image.jpg" alt="Profile">
+                </p>
+            </div>
+
+            <div class="testimony">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima veritatis esse molestias praesentium quod consequuntur ipsum impedit accusantium, sint quam?
+                </p>
+
+                <p>
+                    <span>Name</span>
+                    <img src="/assets/images/image.jpg" alt="Profile">
+                </p>
+            </div>
+
+            <div class="testimony">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima veritatis esse molestias praesentium quod consequuntur ipsum impedit accusantium, sint quam?
+                </p>
+
+                <p>
+                    <span>Name</span>
+                    <img src="/assets/images/image.jpg" alt="Profile">
+                </p>
+            </div>
+
+            <div class="testimony">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima veritatis esse molestias praesentium quod consequuntur ipsum impedit accusantium, sint quam?
+                </p>
+
+                <p>
+                    <span>Name</span>
+                    <img src="/assets/images/image.jpg" alt="Profile">
+                </p>
+            </div>
+
+        </div>
+
     </div>
-</footer>
+     <!--------testimonies end-->
+    
 
-<script src="./node_modules/wowjs/dist/wow.min.js"></script>
-<script>
-new WOW().init();
-  </script>  
-<script src="assets/script/App.js"></script>
-
+    <script src="/assets/script/App.js"></script>
 </body>
 </html>
