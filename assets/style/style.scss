@@ -472,11 +472,22 @@ body{
         &--bottom{
             @include displayGrid;
             grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
 
             i{
                 color: $secondary--color;
-                font-size: 2rem;
+                font-size: 2.2rem;
                 margin: 3px;
+            }
+
+            span{
+                img{
+                    background-color: white;
+                    box-sizing: border-box;
+                }
             }
 
         }

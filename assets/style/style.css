@@ -700,12 +700,27 @@ body img {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .skills__wrapper .skill__card--bottom i {
   color: #E8F1F2;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 3px;
+}
+
+.skills__wrapper .skill__card--bottom span img {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*skills end*/
