@@ -1,0 +1,721 @@
+@import "../style/components/functions";
+@import "../style/components/style";
+@import "../style/default";
+@import "../style/pallete";
+@import "../../node_modules/include-media/dist/include-media";
+
+
+@font-face {
+    font-family: poppins;
+    src: url("/assets/style/Poppins/Poppins-Medium.ttf");
+}
+
+html,
+body{
+    font-family: poppins;
+    scroll-behavior: smooth;
+    img{
+        image-rendering: optimizeSpeed;
+    }
+
+    @include media("≥phone", "≤tablet") {
+    
+    }
+
+}
+
+
+/*navbar*/
+.navbar{
+    z-index: 10000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $primary--color;
+
+    &__logo{
+
+    @include media("≥phone", "≤tablet") {
+
+    }
+        
+        h3{
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bolder;
+            
+        }
+    }
+
+    ul{
+    
+    @include media("≥phone", "≤tablet") {
+        display: none;
+    
+    }
+        li{
+            a{ 
+                // @include debug(red);
+                color: white;
+                font-size: 0.9rem;
+                text-decoration: none;
+                transition: all 0.5s;
+            }
+
+            .active{
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                    text-underline-position: under;
+                    text-decoration-thickness: 2px;
+                    
+                
+            }
+        }
+
+        .btn-link{
+            padding: calc(25px - 2%);
+            margin: 0;
+            border-radius: 5px;
+            border:1px solid $secondary--color;
+
+            //on hover
+            &:hover{
+                background-color: $secondary--color;
+
+                a{
+                    color: $primary--color;
+                }
+            }
+
+            //anc tag
+            a{
+            font-weight: bold;
+            color: $secondary--color;
+            margin:20px;
+            }
+        }
+    }
+}
+
+/*navbar end*/
+
+/*banner*/
+.banner{
+    @include displayGrid;
+    grid-template-columns: repeat(2,1fr);
+    padding: calc(5%);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: $secondary--color;
+    margin-top: 5%;
+
+    //media queries
+    @include media("≥phone", "≤tablet") {
+    grid-template-columns: repeat(1,1fr);
+    padding-top: 20%;
+    }
+
+
+    &__content{
+        @include displayFlex(column);
+        align-items: flex-start;
+        padding: calc(100% - 95%);
+
+        //paragraph
+        div.text{
+            flex: 50%;
+            @include displayFlex(row);
+            align-items: center;
+
+            p{
+                font-size: calc(1.5em + 10px);
+                font-weight: bolder;
+                margin: 0px;
+                padding: 0;
+                text-align: flex-end;
+                color: $primary--color;
+            }
+
+            
+        }
+
+        //links
+        .links{
+            border-radius: 40px;
+            padding: 2%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            align-self:flex-start;
+            justify-content: space-evenly;
+            width: 50%;
+
+            i{
+                font-size: 1.5rem;
+                color: $primary--color;
+                transition: color 0.2s;
+                
+
+                &:hover{
+                    color: rgb(13, 87, 172);
+                    border: 2px solid rgb(4, 75, 167);
+                    border-radius:5px;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        //buttons
+        .buttons{
+            flex: auto;
+            @include displayGrid;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+
+            .btn{
+                margin: 5%;
+                padding: 6%;
+                font-weight: bold;
+                border-radius: 1px;
+                a{
+                    color:$secondary--color;
+                }
+            }
+
+            button{
+                transition: all 0.5s;
+                &:nth-last-child(2){
+                    border: 2px solid transparent;
+                    background-color: rgb(5, 38, 68);
+                
+                    &:hover{
+                        border: 2px solid rgb(5, 38, 68);
+                        background-color: transparent;
+                        a{
+                            color: black;
+                        }
+                    }
+                    }
+    
+                    &:nth-last-child(1){
+    
+                        border: 2px solid rgb(5, 38, 68);
+                        background-color: transparent;
+                        a{
+                            color: $primary--color;
+                        }
+
+                        &:hover{
+                            border: 2px solid $primary--color;
+                            background-color: white;
+                            background-color: rgb(5, 38, 68);
+                            
+                            a{
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+    
+                    }
+            }
+
+        }
+    }
+
+    &__image{
+
+        img{
+            width: calc(100% - 1%);
+            max-width: calc(100% - 1%);
+        }
+    }
+}
+
+/*banner end*/
+
+/*new Components*/
+.header{
+    margin-bottom: 2%;
+    grid-area: top;
+    background-color: $secondary--color;
+    display: flex;
+    flex-direction: row;
+    h5{
+        flex: 1 1 auto;
+        margin: 15px;
+        padding: 0;   
+    }
+
+    .balls{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 10px;
+
+        div{
+            background-color: rgb(148, 146, 146);
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 50%;
+        }
+    }
+
+
+}
+
+/*new Components end*/
+
+/*about me */
+.about{
+    @include displayGrid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "top top"
+                            "right left";
+    padding: calc(100% - 95%);
+
+    //media queries
+    @include media("≥phone", "≤tablet") {
+        grid-template-columns: 1fr;
+        grid-template-areas: "top"
+                            "right"
+                            "left";
+    
+    }
+    
+    
+    //images
+    &__image{
+        grid-area: right;
+        img{
+            display: block;
+            width: 90%;
+            max-width: 95%;
+            
+        }
+    }
+
+    //content
+    &__content{
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+
+    p{
+        flex:1;
+        color: $primary--color;
+    }
+
+    //buttons
+    .buttons{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-gap: 2%;
+    box-sizing: border-box;
+
+    .btn{
+        background-color: $primary--color;
+        box-sizing: border-box;
+        transition: all 0.9s;
+        a{
+            color: white;
+        }
+
+        //on hover
+        &:hover{
+            border: 1px solid $primary--color;
+            background-color: transparent;
+            a{
+                color: $primary--color;
+            }
+        }
+    
+    }
+
+    //button inside our button in about me 1
+    button{
+
+        &:nth-last-child(1){
+            border: 1px solid $primary--color;
+            background-color: transparent;
+
+            a{
+                color: black;
+            }
+            
+            &:hover{
+                background-color:$primary--color;
+                a{
+                    color: $secondary--color;
+                }
+            }
+            
+        }
+
+    }
+
+
+    }
+    }
+}
+/*about me */
+
+/* second about banner */
+
+.about_banner{
+    
+    //media
+    @include media("≥phone", "≤tablet") {
+        @include displayFlex(column);
+
+    }
+    
+    .header{
+        display: none;
+    }
+    .about__image{
+
+        grid-area: left;
+    }
+
+
+    .about__content{
+        grid-area: right;
+
+        p{
+            color: $primary--color;
+        }
+
+        button{
+            display: none;
+            
+            &:nth-last-child(1){
+                background-color: rgb(255, 255, 255);
+                a{
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+
+    }
+}
+
+/* second about banner */
+
+/*skills*/
+.skills{
+    background-color: $secondary--color;
+    padding: 5%;
+
+    &__title{
+        @include displayFlex(column);
+        align-items: center;
+        color: $primary--color;
+        *{
+            padding: 0;
+            margin: 10px;
+        }
+
+        h4{
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 2rem;
+        }
+        
+
+    }
+
+    &__wrapper{
+    @include displayGrid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    //card
+    .skill__card{
+        // @include debug(red);
+        @include displayFlex(column);
+        background-color: $primary--color;
+        padding: 10%;
+        border-radius: 10px;
+        transform: scale(0.9);
+
+        &--top{
+            @include displayFlex(column);
+            align-items: center;
+
+
+            span{
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+                padding: 5%;
+                i{
+                    font-size: 2rem;
+                }
+            }
+            
+
+
+        }
+
+        &--center{
+            color: $secondary--color;
+            @include displayFlex(column);
+            align-items: center;
+
+
+        }
+
+        &--bottom{
+            @include displayGrid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            i{
+                color: $secondary--color;
+                font-size: 2rem;
+                margin: 3px;
+            }
+
+        }
+    }
+    
+
+    }
+}
+
+/*skills end*/
+
+/*projects*/
+.projects{
+
+    &__title{
+        @include displayFlex(column);
+        align-items: center;
+        padding: 2%;
+        color: $primary--color;
+        h4{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 1.6rem;
+            margin: 0px;
+            padding: 0;
+        }
+    }
+
+    &__wrapper{
+        @include displayGrid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        
+        &--card{
+            z-index: 1;
+            position: relative;
+            margin: 2px;
+            img{
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .overlay{
+                position: absolute;
+                top: 0;
+                background-color: $primary--color;
+                height: 100%;
+                @include displayFlex(column);
+                justify-content: center;
+                align-items: center;
+                transition:all 0.5s;
+                opacity: 0;
+                cursor: pointer;
+
+                p{
+                    padding: 5%;
+                    color: $secondary--color;
+                    text-align: center;
+                }
+
+                .buttons{
+                    margin: 5px;
+                    background-color: $primary--color;
+
+                    button{
+                        transition: all 0.2s;
+                        &:hover{
+                        background-color: $primary--color
+                        a{
+                            color: white;
+                        }
+                    }
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+/*projects*/
+
+
+/*testimony secrion*/
+.testimonies{
+    background-color: $secondary--color;
+    padding: 10%;
+
+    &__title{
+        @include displayFlex(column);
+        align-items: center;
+        padding: 2%;
+        color: $primary--color;
+        h4{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 1.6rem;
+            margin: 0px;
+            padding: 0;
+        }
+    }
+
+
+    &__wrapper{
+    @include displayGrid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    .testimony{
+    background-color: $third--color;
+    transform: scale(0.9);
+    padding: 5%;
+    border-radius: 5px;
+    p{
+        color: rgb(149, 150, 149);
+
+        &:nth-last-child(1){
+            border: 1px solid $primary--color;
+            background-color: $primary--color;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: flex-end;
+            border-radius: 50px;
+            transform: scale(0.9);
+
+            span{
+                color: $secondary--color;
+                @include displayFlex(column);
+                align-items: flex-end;
+            }
+            img{
+                object-fit: cover;                
+                border-radius: 50%;
+                margin: 5px;
+            }
+        }
+    }
+
+    }
+
+    }
+}
+
+/*testimony secrion end*/
+
+/*blogpost*/
+.blog{
+    padding: 5%;
+
+    &__header{
+    @include displayFlex(column);
+    align-items: center;
+
+    h4{
+        font-size: 0.8rem;
+        margin: 0px;
+    }
+    p{
+        font-size: 1.4rem;
+        margin: 5px;
+    }
+
+    }
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+
+        
+    
+    }
+    .blogpost{
+        transform: scale(0.9);
+        @include displayFlex(column);
+        align-items: flex-start;
+        // display: none;
+
+        //image
+        img{
+
+        }
+
+        //div contain content
+        &__content{
+
+            h4{
+                color: $primary--color;
+            }
+
+            span{
+                color: $primary--color;
+                font-size: 0.8rem;
+            }
+            p{
+                color: rgb(116, 114, 114);
+            }
+            
+            a{
+                color: $primary--color;
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                transition: all 0.5s;
+
+                &:hover{
+                    color: $secondary--color;
+
+                }
+            }
+        }
+
+    }
+}
+
+/*blogpost*/
+
+/*footer*/
+footer{
+    background-color: $primary--color;
+    @include displayFlex(column);
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+    
+
+    p{
+        color: $secondary--color;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+
+    }
+    
+    
+}
+
+/*footer end*/
+

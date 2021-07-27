@@ -1,0 +1,71 @@
+@import "../components/functions";
+
+//button default styles
+.btn{
+    border: none;
+    padding: 0.8rem;
+    a{
+        text-decoration: none;
+        color: black;
+        margin: 2rem;
+    }
+}
+//button default styles end
+
+//navbar default styles
+.navbar{
+    @include displayFlex(row);
+    background-color: rgb(238, 238, 238);
+
+    &__logo{
+    flex: auto;
+    @include displayFlex(column);
+    align-items:center;
+    }
+    &__menu{
+    @include displayFlex(row);
+    align-items: center;
+    justify-content: space-evenly;
+    flex:1 0 auto;
+        padding: 0;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+}
+//navbar default styles end
+
+
+/*card default*/
+.card{
+    @include displayFlex(column);
+    &__image{
+        @include displayFlex(column);
+        align-items: center;
+        img{
+            display: block;
+            width: calc(100% - 1%);
+            max-width: calc(100% - 1%);
+        }
+    }
+
+    &__title{
+
+    }
+
+    &__content{
+
+    }
+
+    &__links{
+        @include displayFlex(row);
+        justify-content: space-evenly;
+
+    }
+}
+/*card default*/
