@@ -193,6 +193,12 @@ body img {
   font-weight: bolder;
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+}
+
 .navbar ul li a {
   color: white;
   font-size: 0.9rem;
@@ -242,6 +248,14 @@ body img {
   padding-bottom: 0;
   background-color: #E8F1F2;
   margin-top: 5%;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .banner {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding-top: 20%;
+  }
 }
 
 .banner__content {
@@ -444,6 +458,14 @@ body img {
   padding: calc(100% - 95%);
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+  .about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "top" "right" "left";
+  }
+}
+
 .about__image {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -535,6 +557,18 @@ body img {
 
 /*about me */
 /* second about banner */
+@media (min-width: 320px) and (max-width: 768px) {
+  .about_banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about_banner .header {
   display: none;
 }
@@ -570,7 +604,7 @@ body img {
 /* second about banner */
 /*skills*/
 .skills {
-  background-color: #001A23;
+  background-color: #E8F1F2;
   padding: 5%;
 }
 
@@ -585,7 +619,7 @@ body img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #E8F1F2;
+  color: #001A23;
 }
 
 .skills__title * {
@@ -609,7 +643,7 @@ body img {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.skills__wrapper .card {
+.skills__wrapper .skill__card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,29 +651,14 @@ body img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
-  background-color: #E8F1F2;
-  padding: 5%;
+  background-color: #001A23;
+  padding: 10%;
+  border-radius: 10px;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
-.skills__wrapper .card:nth-child(3) {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.skills__wrapper .card:hover {
-  -webkit-animation: showBorder 2s linear infinite;
-          animation: showBorder 2s linear infinite;
-  -webkit-transform: scale(1) translateY(-20px);
-          transform: scale(1) translateY(-20px);
-}
-
-.skills__wrapper .card__image {
-  font-size: 3rem;
+.skills__wrapper .skill__card--top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,23 +669,20 @@ body img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
 }
 
-.skills__wrapper .card__image i {
-  color: #E8F1F2;
-  margin: 10px;
-  padding: 5%;
-  background-color: #001A23;
+.skills__wrapper .skill__card--top span {
+  background-color: white;
   border-radius: 50%;
+  padding: 5%;
 }
 
-.skills__wrapper .card__title {
+.skills__wrapper .skill__card--top span i {
+  font-size: 2rem;
+}
+
+.skills__wrapper .skill__card--center {
+  color: #E8F1F2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,31 +695,17 @@ body img {
           align-items: center;
 }
 
-.skills__wrapper .card__content {
+.skills__wrapper .skill__card--bottom {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 
-.skills__wrapper .card__content span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.skills__wrapper .card__content span i:nth-last-child(2) {
-  font-size: 1.5rem;
+.skills__wrapper .skill__card--bottom i {
+  color: #E8F1F2;
+  font-size: 2rem;
+  margin: 3px;
 }
 
 /*skills end*/
@@ -737,8 +739,8 @@ body img {
 .projects__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .projects__wrapper--card {
@@ -911,6 +913,16 @@ body img {
           align-items: center;
 }
 
+.blog__header h4 {
+  font-size: 0.8rem;
+  margin: 0px;
+}
+
+.blog__header p {
+  font-size: 1.4rem;
+  margin: 5px;
+}
+
 .blog__wrapper {
   display: -ms-grid;
   display: grid;
@@ -918,7 +930,7 @@ body img {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
-.blog__wrapper .blogpost {
+.blog .blogpost {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
   display: -webkit-box;
@@ -933,13 +945,55 @@ body img {
           align-items: flex-start;
 }
 
-.blog__wrapper .blogpost__title {
-  display: none;
+.blog .blogpost__content h4 {
+  color: #001A23;
+}
+
+.blog .blogpost__content span {
+  color: #001A23;
+  font-size: 0.8rem;
+}
+
+.blog .blogpost__content p {
+  color: #747272;
+}
+
+.blog .blogpost__content a {
+  color: #001A23;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blog .blogpost__content a:hover {
+  color: #E8F1F2;
+}
+
+/*blogpost*/
+/*footer*/
+footer {
+  background-color: #001A23;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2%;
+  text-align: center;
 }
 
-/*blogpost*/
+footer p {
+  color: #E8F1F2;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/*footer end*/
 /*# sourceMappingURL=style.css.map */

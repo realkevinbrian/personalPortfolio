@@ -2,6 +2,8 @@
 @import "../style/components/style";
 @import "../style/default";
 @import "../style/pallete";
+@import "../../node_modules/include-media/dist/include-media";
+
 
 @font-face {
     font-family: poppins;
@@ -12,12 +14,13 @@ html,
 body{
     font-family: poppins;
     scroll-behavior: smooth;
-    
-    
     img{
         image-rendering: optimizeSpeed;
     }
 
+    @include media("≥phone", "≤tablet") {
+    
+    }
 
 }
 
@@ -32,13 +35,24 @@ body{
 
     &__logo{
 
+    @include media("≥phone", "≤tablet") {
+
+    }
+        
         h3{
             color: white;
             font-size: 1.3rem;
             font-weight: bolder;
+            
         }
     }
+
     ul{
+    
+    @include media("≥phone", "≤tablet") {
+        display: none;
+    
+    }
         li{
             a{ 
                 // @include debug(red);
@@ -95,6 +109,14 @@ body{
     padding-bottom: 0;
     background-color: $secondary--color;
     margin-top: 5%;
+
+    //media queries
+    @include media("≥phone", "≤tablet") {
+    grid-template-columns: repeat(1,1fr);
+    padding-top: 20%;
+    }
+
+
     &__content{
         @include displayFlex(column);
         align-items: flex-start;
@@ -251,6 +273,16 @@ body{
     grid-template-areas: "top top"
                             "right left";
     padding: calc(100% - 95%);
+
+    //media queries
+    @include media("≥phone", "≤tablet") {
+        grid-template-columns: 1fr;
+        grid-template-areas: "top"
+                            "right"
+                            "left";
+    
+    }
+    
     
     //images
     &__image{
@@ -333,7 +365,12 @@ body{
 /* second about banner */
 
 .about_banner{
-   
+    
+    //media
+    @include media("≥phone", "≤tablet") {
+        @include displayFlex(column);
+
+    }
     
     .header{
         display: none;
@@ -369,13 +406,13 @@ body{
 
 /*skills*/
 .skills{
-    background-color: $primary--color;
+    background-color: $secondary--color;
     padding: 5%;
 
     &__title{
         @include displayFlex(column);
         align-items: center;
-        color: $secondary--color;
+        color: $primary--color;
         *{
             padding: 0;
             margin: 10px;
@@ -395,81 +432,56 @@ body{
     &__wrapper{
     @include displayGrid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    
     //card
-    .card{
-    @include displayFlex(column);
-    margin: 10px;
-    background-color: $secondary--color;
-    padding: 5%;
-    transform: scale(0.9);
-    transition: all 0.5s;
+    .skill__card{
+        // @include debug(red);
+        @include displayFlex(column);
+        background-color: $primary--color;
+        padding: 10%;
+        border-radius: 10px;
+        transform: scale(0.9);
 
-    &:nth-child(3){
-    transform: scale(1);
-
-    }
-
-    //on hover
-    &:hover{
-    animation: showBorder 2s linear infinite;
-    transform: scale(1) translateY(-20px);
-
-    }
-    
-    //image
-    &__image{
-    font-size: 3rem;
-    @include displayFlex(column);
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-
-    i{
-    color: $secondary--color;
-    margin: 10px;
-    padding: 5%;
-    background-color: $primary--color;
-    border-radius: 50%;
+        &--top{
+            @include displayFlex(column);
+            align-items: center;
 
 
-    }
+            span{
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+                padding: 5%;
+                i{
+                    font-size: 2rem;
+                }
+            }
+            
 
-    }
 
-    //title
-    &__title{
-    @include displayFlex(column);
-    align-items: center;
-    
-    }
-
-    //content
-    &__content{
-    // @include displayFlex(row);
-    @include displayGrid;
-    grid-template-columns: 1fr 1fr;
-    
-
-    span{
-    @include displayFlex(column);
-    align-items: center;
-    justify-content: space-evenly;
-
-    i{
-        &:nth-last-child(2){
-            font-size: 1.5rem;
         }
-        
-    }
 
-    }
+        &--center{
+            color: $secondary--color;
+            @include displayFlex(column);
+            align-items: center;
 
-    }
 
-    }
+        }
 
+        &--bottom{
+            @include displayGrid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            i{
+                color: $secondary--color;
+                font-size: 2rem;
+                margin: 3px;
+            }
+
+        }
+    }
+    
 
     }
 }
@@ -497,7 +509,7 @@ body{
 
     &__wrapper{
         @include displayGrid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
         
         &--card{
             z-index: 1;
@@ -623,29 +635,87 @@ body{
     @include displayFlex(column);
     align-items: center;
 
+    h4{
+        font-size: 0.8rem;
+        margin: 0px;
+    }
+    p{
+        font-size: 1.4rem;
+        margin: 5px;
+    }
+
     }
 
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 
-        .blogpost{
-            transform: scale(0.9);
-            @include displayFlex(column);
-            align-items: flex-start;
+        
+    
+    }
+    .blogpost{
+        transform: scale(0.9);
+        @include displayFlex(column);
+        align-items: flex-start;
+        // display: none;
 
-            //paragraph inside
-
-            &__title{
-            
-                display: none;
-                flex-direction: column;
-            }
+        //image
+        img{
 
         }
-    
+
+        //div contain content
+        &__content{
+
+            h4{
+                color: $primary--color;
+            }
+
+            span{
+                color: $primary--color;
+                font-size: 0.8rem;
+            }
+            p{
+                color: rgb(116, 114, 114);
+            }
+            
+            a{
+                color: $primary--color;
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                transition: all 0.5s;
+
+                &:hover{
+                    color: $secondary--color;
+
+                }
+            }
+        }
+
     }
 }
 
 /*blogpost*/
+
+/*footer*/
+footer{
+    background-color: $primary--color;
+    @include displayFlex(column);
+    align-items: center;
+    padding: 2%;
+    text-align: center;
+    
+
+    p{
+        color: $secondary--color;
+        padding: 0;
+        margin: 0;
+        font-size: 0.9rem;
+
+    }
+    
+    
+}
+
+/*footer end*/
 
