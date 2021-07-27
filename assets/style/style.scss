@@ -1,6 +1,7 @@
 @import "../style/components/functions";
 @import "../style/components/style";
 @import "../style/default";
+@import "../style/pallete";
 
 @font-face {
     font-family: poppins;
@@ -27,7 +28,7 @@ body{
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgb(4, 37, 87);
+    background-color: $primary--color;
 
     &__logo{
 
@@ -42,6 +43,7 @@ body{
             a{ 
                 // @include debug(red);
                 color: white;
+                font-size: 0.9rem;
                 text-decoration: none;
                 transition: all 0.5s;
             }
@@ -57,17 +59,25 @@ body{
         }
 
         .btn-link{
-            background-color: white;
-            padding: 1%;
+            padding: calc(25px - 2%);
             margin: 0;
             border-radius: 5px;
+            border:1px solid $secondary--color;
 
+            //on hover
+            &:hover{
+                background-color: $secondary--color;
+
+                a{
+                    color: $primary--color;
+                }
+            }
+
+            //anc tag
             a{
             font-weight: bold;
-            color: black;
+            color: $secondary--color;
             margin:20px;
-
-
             }
         }
     }
@@ -83,7 +93,7 @@ body{
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
-    background-color: rgb(245, 244, 244);
+    background-color: $secondary--color;
     margin-top: 5%;
     &__content{
         @include displayFlex(column);
@@ -102,6 +112,7 @@ body{
                 margin: 0px;
                 padding: 0;
                 text-align: flex-end;
+                color: $primary--color;
             }
 
             
@@ -109,7 +120,6 @@ body{
 
         //links
         .links{
-            // background-color: rgb(3, 70, 112);
             border-radius: 40px;
             padding: 2%;
             display: flex;
@@ -120,14 +130,14 @@ body{
             width: 50%;
 
             i{
-                font-size: 2em;
-                color: rgb(0, 0, 0);
+                font-size: 1.5rem;
+                color: $primary--color;
                 transition: color 0.2s;
                 
 
                 &:hover{
-                    color: rgb(11, 63, 122);
-                    border: 2px solid rgb(9, 58, 122);
+                    color: rgb(13, 87, 172);
+                    border: 2px solid rgb(4, 75, 167);
                     border-radius:5px;
                     transform: scale(1.2);
                 }
@@ -147,7 +157,7 @@ body{
                 font-weight: bold;
                 border-radius: 1px;
                 a{
-                    color: white;
+                    color:$secondary--color;
                 }
             }
 
@@ -159,7 +169,7 @@ body{
                 
                     &:hover{
                         border: 2px solid rgb(5, 38, 68);
-                        background-color: white;
+                        background-color: transparent;
                         a{
                             color: black;
                         }
@@ -171,11 +181,11 @@ body{
                         border: 2px solid rgb(5, 38, 68);
                         background-color: transparent;
                         a{
-                            color: black;
+                            color: $primary--color;
                         }
 
                         &:hover{
-                            border: 2px solid rgb(5, 38, 68);
+                            border: 2px solid $primary--color;
                             background-color: white;
                             background-color: rgb(5, 38, 68);
                             
@@ -205,7 +215,7 @@ body{
 .header{
     margin-bottom: 2%;
     grid-area: top;
-    background-color: rgb(248, 248, 248);
+    background-color: $secondary--color;
     display: flex;
     flex-direction: row;
     h5{
@@ -261,6 +271,7 @@ body{
 
     p{
         flex:1;
+        color: $primary--color;
     }
 
     //buttons
@@ -273,7 +284,7 @@ body{
     box-sizing: border-box;
 
     .btn{
-        background-color: rgb(16, 93, 165);
+        background-color: $primary--color;
         box-sizing: border-box;
         transition: all 0.9s;
         a{
@@ -282,10 +293,10 @@ body{
 
         //on hover
         &:hover{
-            border: 1px solid rgb(0, 140, 255);
-            background-color: white;
+            border: 1px solid $primary--color;
+            background-color: transparent;
             a{
-                color: black;
+                color: $primary--color;
             }
         }
     
@@ -295,7 +306,7 @@ body{
     button{
 
         &:nth-last-child(1){
-            border: 1px solid rgb(0, 140, 255);
+            border: 1px solid $primary--color;
             background-color: transparent;
 
             a{
@@ -303,9 +314,9 @@ body{
             }
             
             &:hover{
-                background-color: rgb(0, 140, 255);
+                background-color:$primary--color;
                 a{
-                    color: white;
+                    color: $secondary--color;
                 }
             }
             
@@ -322,7 +333,7 @@ body{
 /* second about banner */
 
 .about_banner{
-    background-color: rgb(255, 255, 255);
+   
     
     .header{
         display: none;
@@ -337,10 +348,11 @@ body{
         grid-area: right;
 
         p{
-            color: rgb(10, 143, 177);
+            color: $primary--color;
         }
 
         button{
+            display: none;
             
             &:nth-last-child(1){
                 background-color: rgb(255, 255, 255);
@@ -357,12 +369,13 @@ body{
 
 /*skills*/
 .skills{
-    background-color: rgb(214, 229, 243);
+    background-color: $primary--color;
     padding: 5%;
 
     &__title{
         @include displayFlex(column);
         align-items: center;
+        color: $secondary--color;
         *{
             padding: 0;
             margin: 10px;
@@ -387,7 +400,7 @@ body{
     .card{
     @include displayFlex(column);
     margin: 10px;
-    background-color: white;
+    background-color: $secondary--color;
     padding: 5%;
     transform: scale(0.9);
     transition: all 0.5s;
@@ -414,10 +427,10 @@ body{
     justify-items: center;
 
     i{
-    color: rgb(255, 255, 255);
+    color: $secondary--color;
     margin: 10px;
     padding: 5%;
-    background-color: rgb(0, 162, 255);
+    background-color: $primary--color;
     border-radius: 50%;
 
 
@@ -470,6 +483,7 @@ body{
         @include displayFlex(column);
         align-items: center;
         padding: 2%;
+        color: $primary--color;
         h4{
             margin: 0;
             padding: 0;
@@ -499,7 +513,7 @@ body{
             .overlay{
                 position: absolute;
                 top: 0;
-                background-color: rgba(0, 0, 0, 0.527);
+                background-color: $primary--color;
                 height: 100%;
                 @include displayFlex(column);
                 justify-content: center;
@@ -510,15 +524,18 @@ body{
 
                 p{
                     padding: 5%;
-                    color: white;
+                    color: $secondary--color;
                     text-align: center;
                 }
 
                 .buttons{
+                    margin: 5px;
+                    background-color: $primary--color;
+
                     button{
                         transition: all 0.2s;
                         &:hover{
-                        background-color: rgb(0, 132, 255);
+                        background-color: $primary--color
                         a{
                             color: white;
                         }
@@ -536,12 +553,14 @@ body{
 
 /*testimony secrion*/
 .testimonies{
-    background-color: rgb(121, 179, 255);
+    background-color: $secondary--color;
+    padding: 10%;
 
     &__title{
         @include displayFlex(column);
         align-items: center;
         padding: 2%;
+        color: $primary--color;
         h4{
             margin: 0;
             padding: 0;
@@ -557,41 +576,76 @@ body{
     &__wrapper{
     @include displayGrid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    // overflow: scroll;
-
 
     .testimony{
-    background-color: white;
+    background-color: $third--color;
     transform: scale(0.9);
     padding: 5%;
     border-radius: 5px;
-
     p{
-        &:nth-child(1){
+        color: rgb(149, 150, 149);
 
-        }
-        
-        &:nth-child(2){
-            @include displayFlex(row);
+        &:nth-last-child(1){
+            border: 1px solid $primary--color;
+            background-color: $primary--color;
+            display: flex;
+            align-content: center;
             align-items: center;
             justify-content: flex-end;
-            img{
-            // @include debug(rgb(0, 162, 255));
-            border: 2px solid rgb(0, 132, 255);
-            border-radius: 50%;
-            margin: 10px;
+            border-radius: 50px;
+            transform: scale(0.9);
 
-                width: 20%;
+            span{
+                color: $secondary--color;
+                @include displayFlex(column);
+                align-items: flex-end;
             }
-            
+            img{
+                object-fit: cover;                
+                border-radius: 50%;
+                margin: 5px;
+            }
         }
     }
 
     }
+
     }
 }
 
-
 /*testimony secrion end*/
 
+/*blogpost*/
+.blog{
+    padding: 5%;
+
+    &__header{
+    @include displayFlex(column);
+    align-items: center;
+
+    }
+
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+
+        .blogpost{
+            transform: scale(0.9);
+            @include displayFlex(column);
+            align-items: flex-start;
+
+            //paragraph inside
+
+            &__title{
+            
+                display: none;
+                flex-direction: column;
+            }
+
+        }
+    
+    }
+}
+
+/*blogpost*/
 

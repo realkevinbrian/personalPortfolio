@@ -37,7 +37,7 @@ for(let elem of overlay){
 
   elem.addEventListener ("mouseover", show=>{
 
-    show.target.style.opacity = "4";
+    show.target.style.opacity = "0.9";
   })
 
   elem.addEventListener("mouseleave", hide=>{
